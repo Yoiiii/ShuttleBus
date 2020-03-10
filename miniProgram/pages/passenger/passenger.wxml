@@ -1,0 +1,163 @@
+<block wx:if="{{result}}">
+    <view class="travel">
+        <view class="travel-info">
+            <view class="travel-info-route">
+                <view class="travel-info-route-start">
+                    <view class="travel-info-route-start-text">{{location}}</view>
+                    <block wx:if='{{locationLTime}}'>
+                        <view class="travel-info-route-start-time">(
+                            <view class="travel-info-route-start-time2">已離開</view>
+                            <!-- <view class="travel-info-route-start-time2">{{language.leaved}}</view> -->
+                            )</view>
+                    </block>
+                    <block wx:elif='{{locationATime}}'>
+                        <view class="travel-info-route-start-time">(
+                            <view class="travel-info-route-start-time2">已到達</view>
+                            <!-- <view class="travel-info-route-start-time2">{{language.arrived}}</view> -->
+                            )</view>
+                    </block>
+                    <block wx:elif='{{!locationATime&&status=="1"}}'>
+                        <view class="travel-info-route-start-time">{{time1}}
+                            <view class="travel-info-route-start-time2">{{arrivalTime}}</view>{{time3}}</view>
+                    </block>
+                    <block wx:else>
+                        <view class="travel-info-route-start-time">{{time1}}
+                            <view class="travel-info-route-start-time2">{{time2}}</view>{{time3}}</view>
+                    </block>
+                </view>
+                <image class="timg" src="../../image/timg.png"></image>
+                <view class="travel-info-route-end">
+                    <view class="travel-info-route-end-text">{{destination}}</view>
+                    <block wx:if='{{destinationATime}}'>
+                        <view class="travel-info-route-end-time">(
+                            <view class="travel-info-route-end-time2">已到達</view>
+                            <!-- <view class="travel-info-route-end-time2">{{language.arrived}}</view> -->
+                            )</view>
+                    </block>
+                    <!--<block wx:elif='{{status=="0"}}'>
+            <view class="travel-info-route-end-time">(
+              <view class="travel-info-route-end-time2">未出發</view>
+              )</view>
+          </block>
+          <block wx:elif='{{!locationATime}}'>
+            <view class="travel-info-route-end-time">(
+              <view class="travel-info-route-end-time2">未上車</view>
+              )</view>
+          </block>-->
+                    <block wx:else>
+                        <view class="travel-info-route-end-time">(預計
+                            <!-- <view class="travel-info-route-end-time">({{language.forecast}} -->
+                            <view class="travel-info-route-end-time2">{{forecast}}</view>到達)</view>
+                        <!-- <view class="travel-info-route-end-time2">{{forecast}}</view>{{language.arrive}})</view> -->
+                    </block>
+                </view>
+                <view wx:if="{{confirmTime==''}}" class="travel-info-route-status">未上車</view>
+                <view wx:else class="travel-info-route-status2" bindlongtap="cancel">已上車</view>
+                <!-- <view wx:if="{{confirmTime==''}}" class="travel-info-route-status">{{language.noBoarding}}</view>
+        <view wx:else class="travel-info-route-status2" bindlongtap="cancel">{{language.boarding}}</view> -->
+            </view>
+            <view class="travel-info-car">
+                <view wx:if="{{carImgUrls==''}}" class="travel-info-carNo2">
+                    {{carID}}
+                </view>
+                <view wx:else class="travel-info-carNo" bindtap="showCar">
+                    {{carID}}
+                </view>
+                <!-- <view class="travel-info-carType" style="background-color:{{type}};">
+                    {{typeName}}
+                </view> -->
+                <!-- <view class="car">
+                    <view class="car_body">
+                        <view class="car_top1" style="background:{{type}};"></view>
+                        <view class="car_top2" style="background:{{type}};"></view>
+                        <view class="car_win1" ></view>
+                        <view class="car_win2"></view>
+                        <view class="car_win3"></view>
+                        <view class="car_bottom1" style="background:{{type}};"></view>
+                        <view class="car_bottom2" style="background:{{type}};"></view>
+                    </view>
+                    <view class="frontWheel"></view>
+                    <view class="endWheel"></view>
+                    <view class="exhaust"></view>
+                </view> -->
+                <view class="travel-info-driver">
+                    <!-- <view class="travel-info-driver-name">{{driverType}}</view> -->
+                    <view wx:if="{{driverImgUrls==''}}" class="travel-info-driver-name" >{{driver}}</view>
+                    <view wx:else class="travel-info-driver-name2" bindtap="showDriver">{{driver}}</view>
+                    <image wx:if="{{tel}}" class="travel-info-driver-call" src="../../image/call.png" bindtap="call" data-tel="{{tel}}"></image>
+                    <image wx:else class="travel-info-driver-call" src="../../image/nocar.png"></image>
+                </view>
+                <image data-planid="{{planrid}}" class="mapIcon2" src="../../image/openmap.png" bindtap="jumptomap"></image>
+            </view>
+        </view>
+    </view>
+    <!-- <view style="display:flex; flex-direction: row;">
+    <view class="road3">
+      <scroll-view scroll-x>
+        <view class="road2">
+          <block wx:for="{{roadlist}}" wx:for-item="roadlist" wx:key="{{index + 1}}">
+            <view class='road-item' bindtap="station" data-no="{{roadlist.no}}">
+              <image wx:if="{{roadlist.car}}" class='road-image-car' src='../../image/{{roadlist.car}}.png'></image>
+              <image wx:if="{{roadlist.road}}" class='road-image-road' src='../../image/{{roadlist.road}}.png'></image>
+              <view class='road-item-text'>{{roadlist.location}}</view>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="mapIcon3">
+      <image data-planid="{{PlanRID}}" class="mapIcon2" src="../../image/openmap.png" bindtap="jumptomap"></image>
+    </view>
+  </view> -->
+    <route-map roadlist="{{roadlist}}" planrid="{{PlanRID}}" type="{{type}}" bindjumptomap="jumptomap" bindshowCar="showCar"></route-map>
+    <view class="passenger">
+        <block wx:if="{{down}}">
+            <view class="passenger-top" bindtap="up">
+                <view class="passenger-top-text">同車乘客</view>
+                <!-- <view class="passenger-top-text">{{language.passenger}}</view> -->
+                <image class="up-down" src="../../image/up.png"></image>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="passenger-top" bindtap="down">
+                <view class="passenger-top-text">同車乘客</view>
+                <!-- <view class="passenger-top-text">{{language.passenger}}</view> -->
+                <image class="up-down" src="../../image/down.png"></image>
+            </view>
+        </block>
+        <scroll-view scroll-y>
+            <block wx:if="{{down}}">
+                <block wx:if="{{passengers}}">
+                    <block wx:for="{{passengers}}" wx:for-item="passengers" wx:key="index">
+                        <view class="passenger-mid">
+                            <image wx:if="{{passengers.confirmTime==''}}" class="chair" src="../../image/chair3.png"></image>
+                            <image wx:else class="chair" src="../../image/chair2.png"></image>
+                            <view class="passenger-mid-name">{{passengers.name}}</view>
+                            <view class="passenger-mid-item">{{passengers.location}}</view>
+                            <image class="timg2" src="../../image/timg.png"></image>
+                            <view class="passenger-mid-item2">{{passengers.destination}}</view>
+                        </view>
+                    </block>
+                </block>
+                <block wx:else>
+                    <view>暫無同車乘客</view>
+                </block>
+            </block>
+        </scroll-view>
+    </view>
+    <!-- <block wx:if="{{!down}}"> -->
+    <block wx:if='{{locationATime&&!destinationATime}}'>
+        <block wx:if='{{status!="0"}}'>
+            <view wx:if="{{confirmTime!=''}}" class="sliders">
+                <!--<button class="button-cancel" style='padding-bottom:{{ isIphoneX ? 68 : 0 }}rpx;' type="default" bindtap="cancel">撤銷上車</button>-->
+            </view>
+            <view wx:else class="sliders" style='padding-bottom:{{ isIphoneX ? 68 : 0 }}rpx;'>
+                <sliders hint="{{hint}}" bindmyevent="myEventListener"></sliders>
+            </view>
+        </block>
+    </block>
+    <!-- </block> -->
+</block>
+<block wx:else>
+    <view class="result-null">當前暫無行程</view>
+</block>

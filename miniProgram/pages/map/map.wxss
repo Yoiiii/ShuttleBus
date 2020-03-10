@@ -1,0 +1,15 @@
+/* pages/map/map.wxss */
+.refresh{
+    width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 10rpx;
+  right: 0;
+}
+.refresh:active{
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  bottom: 5rpx;
+  right: 0;
+}

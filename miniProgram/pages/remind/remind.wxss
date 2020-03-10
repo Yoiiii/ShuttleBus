@@ -1,0 +1,31 @@
+/* pages/remind/remind.wxss */
+.pages{
+
+}
+.tip{
+  margin-top: 30%;
+  width: 90%;
+}
+.value{
+  font-size: 40rpx;
+}
+.title{ 
+  text-align: center;
+  margin: 10rpx;
+  font-size: 60rpx;
+  font-weight: bold;
+  margin-bottom: 60rpx
+}
+.road{
+  margin: 10rpx;
+  font-size: 40rpx;
+  color: green;
+}
+.carID{
+  margin: 10rpx;
+  font-size: 40rpx;
+  color: blue;
+}
+.button{
+  margin-top: 60rpx!important;
+}

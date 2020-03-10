@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="WeChatWS">
+</Property><Property Name="Solution File" Value="C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\WeChatWS.sln">
+</Property><Property Name="User Options File" Value="C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\WeChatWS.suo">
+</Property><Property Name="Date" Value="2019年8月22日">
+</Property><Property Name="Time" Value="16:01">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="WeChatWS.sln" Description="File successfully backed up as C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\Backup\WeChatWS.sln">
+</Event><Event ErrorLevel="0" Project="" Source="WeChatWS.suo" Description="File successfully backed up as C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\Backup\WeChatWS.suo">
+</Event><Event ErrorLevel="0" Project="WeChatWS" Source="WeChatWS.csproj" Description="Project file successfully backed up as C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\Backup\WeChatWS.csproj">
+</Event><Event ErrorLevel="0" Project="WeChatWS" Source="WeChatWS.csproj.user" Description="Project user file successfully backed up as C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\Backup\WeChatWS.csproj.user">
+</Event><Event ErrorLevel="0" Project="WeChatWS" Source="ConvertJson.cs" Description="File successfully backed up as C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\Backup\ConvertJson.cs">
+</Event><Event ErrorLevel="0" Project="WeChatWS" Source="Cryptography.cs" Description="File successfully backed up as C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\Backup\Cryptography.cs">
+</Event><Event ErrorLevel="0" Project="WeChatWS" Source="DbHelperSQL.cs" Description="File successfully backed up as C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\Backup\DbHelperSQL.cs">
+</Event><Event ErrorLevel="0" Project="WeChatWS" Source="WeChatWS.asmx.cs" Description="File successfully backed up as C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\Backup\WeChatWS.asmx.cs">
+</Event><Event ErrorLevel="0" Project="WeChatWS" Source="HttpWebRequest.cs" Description="File successfully backed up as C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\Backup\HttpWebRequest.cs">
+</Event><Event ErrorLevel="0" Project="WeChatWS" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="WeChatWS" Source="WeChatWS.asmx" Description="File successfully backed up as C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\Backup\WeChatWS.asmx">
+</Event><Event ErrorLevel="0" Project="WeChatWS" Source="Web.config" Description="File successfully backed up as C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\Backup\Web.config">
+</Event><Event ErrorLevel="0" Project="WeChatWS" Source="WeChatWS.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="WeChatWS" Source="WeChatWS.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="WeChatWS.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="WeChatWS.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="WeChatWS" Source="WeChatWS.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,1 @@
+<%@ WebService Language="C#" CodeBehind="WeChatWS.asmx.cs" Class="WeChatWS.WeChatWS" %>  

@@ -1,0 +1,70 @@
+.road3{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.road2 {
+ padding-bottom:10rpx; 
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  /* margin-bottom: 20rpx; */
+  margin-top: 20rpx;
+  
+}
+.road-item {
+    background: #fff;
+  /* margin-bottom: 20rpx; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80rpx;
+  
+}
+
+.road-item-text {
+  margin-top: 10rpx;
+  display: flex;
+  writing-mode: vertical-rl;
+  font-size: 30rpx;
+}
+
+.road-image-road {
+  height: 30rpx;
+  width: 80rpx;
+}
+
+.road-image-car {
+  height: 70rpx;
+  width: 80rpx;
+}
+.mapIcon3{
+  display: flex;
+  flex-direction:column;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  
+  margin-top: 20rpx;
+  height: auto;
+  width: 10%;
+  align-content:center;
+  justify-content:center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 20rpx;
+}
+.mapIcon2{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+.mapIcon2:active{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 10rpx;
+  margin-right: 20rpx;
+}

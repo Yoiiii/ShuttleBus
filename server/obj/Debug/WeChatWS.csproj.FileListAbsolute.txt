@@ -1,0 +1,40 @@
+C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\obj\Debug\WeChatWS.dll
+C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\obj\Debug\WeChatWS.pdb
+C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\bin\WeChatWS.dll
+C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\bin\WeChatWS.pdb
+C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\bin\LitJson.dll
+C:\Users\shallyxiong\Desktop\移动开发\穿梭车小程序\WeChatWS\bin\Newtonsoft.Json.dll
+C:\Users\denglingxiao\Desktop\WeChatWS-TS\bin\WeChatWS.dll
+C:\Users\denglingxiao\Desktop\WeChatWS-TS\bin\WeChatWS.pdb
+C:\Users\denglingxiao\Desktop\WeChatWS-TS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\denglingxiao\Desktop\WeChatWS-TS\obj\Debug\WeChatWS.dll
+C:\Users\denglingxiao\Desktop\WeChatWS-TS\obj\Debug\WeChatWS.pdb
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 190911\bin\WeChatWS.dll
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 190911\bin\WeChatWS.pdb
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 190911\bin\Newtonsoft.Json.dll
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 190911\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 190911\obj\Debug\WeChatWS.dll
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 190911\obj\Debug\WeChatWS.pdb
+C:\Users\denglingxiao\Desktop\WeChatWS-TS - 190912\bin\WeChatWS.dll
+C:\Users\denglingxiao\Desktop\WeChatWS-TS - 190912\bin\WeChatWS.pdb
+C:\Users\denglingxiao\Desktop\WeChatWS-TS - 190912\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\denglingxiao\Desktop\WeChatWS-TS - 190912\obj\Debug\WeChatWS.dll
+C:\Users\denglingxiao\Desktop\WeChatWS-TS - 190912\obj\Debug\WeChatWS.pdb
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 190918\bin\WeChatWS.dll
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 190918\bin\WeChatWS.pdb
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 190918\bin\Newtonsoft.Json.dll
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 190918\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 190918\obj\Debug\WeChatWS.dll
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 190918\obj\Debug\WeChatWS.pdb
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 191009_late\WeChatWS-TS - 191009\bin\WeChatWS.dll
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 191009_late\WeChatWS-TS - 191009\bin\WeChatWS.pdb
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 191009_late\WeChatWS-TS - 191009\bin\Newtonsoft.Json.dll
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 191009_late\WeChatWS-TS - 191009\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 191009_late\WeChatWS-TS - 191009\obj\Debug\WeChatWS.dll
+C:\Users\shallyxiong\Desktop\WeChatWS-TS - 191009_late\WeChatWS-TS - 191009\obj\Debug\WeChatWS.pdb
+C:\Users\denglingxiao\Desktop\WeChatWS-TS - 191009late\bin\WeChatWS.dll
+C:\Users\denglingxiao\Desktop\WeChatWS-TS - 191009late\bin\WeChatWS.pdb
+C:\Users\denglingxiao\Desktop\WeChatWS-TS - 191009late\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\denglingxiao\Desktop\WeChatWS-TS - 191009late\obj\Debug\WeChatWS.dll
+C:\Users\denglingxiao\Desktop\WeChatWS-TS - 191009late\obj\Debug\WeChatWS.pdb

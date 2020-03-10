@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+      "sliders": "../../components/sliders/sliders",
+      "route-map": "../../components/route-map/route-map"
+    },
+    "enablePullDownRefresh": true
+}

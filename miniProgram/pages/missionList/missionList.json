@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": true,
+   "usingComponents": {
+      "tab-switch": "../../components/tab-switch/tab-switch",
+      "list-item": "../../components/list-item/list-item"
+    }
+}

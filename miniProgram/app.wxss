@@ -1,0 +1,9 @@
+/**app.wxss**/
+@import "miniprogram_npm/vant-weapp/common/index.wxss";
+@import "miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss";
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+} 

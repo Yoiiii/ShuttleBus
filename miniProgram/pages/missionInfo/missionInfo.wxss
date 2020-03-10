@@ -1,0 +1,597 @@
+/**index.wxss**/
+
+page {
+    background: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.block {
+    height: 120rpx;
+    width: 100%;
+}
+
+.passengerslist {
+    margin-bottom: 122rpx;
+}
+
+.timg2 {
+    height: 40rpx;
+    width: 40rpx;
+    margin: auto;
+}
+
+.userinfo, .uploader, .tunnel {
+    margin-top: 40rpx;
+    height: 140rpx;
+    width: 100%;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 300ms ease;
+}
+
+.userinfo-avatar {
+    width: 100rpx;
+    height: 100rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+    background-size: cover;
+    background-color: white;
+}
+
+.userinfo-avatar:after {
+    border: none;
+}
+
+.userinfo-nickname {
+    font-size: 32rpx;
+    color: #007aff;
+    background-color: white;
+    background-size: cover;
+}
+
+.userinfo-nickname::after {
+    border: none;
+}
+
+.uploader, .tunnel,  {
+    height: auto;
+    padding: 0 0 0 40rpx;
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+.uploader-text, .tunnel-text {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    line-height: 52px;
+    font-size: 34rpx;
+    color: #007aff;
+}
+
+.uploader-container {
+    width: 100%;
+    height: 400rpx;
+    padding: 20rpx 20rpx 20rpx 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.uploader-image {
+    width: 100%;
+    height: 360rpx;
+}
+
+.tunnel {
+    padding: 0 0 0 40rpx;
+}
+
+.tunnel-text {
+    position: relative;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tunnel-text:first-child {
+    border-top: none;
+}
+
+.tunnel-switch {
+    position: absolute;
+    right: 20rpx;
+    top: -2rpx;
+}
+
+.disable {
+    color: #888;
+}
+
+.service {
+    position: fixed;
+    right: 40rpx;
+    bottom: 40rpx;
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50%;
+    background: linear-gradient(#007aff, #0063ce);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: all 300ms ease;
+}
+
+.service-button {
+    position: absolute;
+    top: 40rpx;
+}
+
+.service:active {
+    box-shadow: none;
+}
+
+.request-text {
+    padding: 20rpx 0;
+    font-size: 24rpx;
+    line-height: 36rpx;
+    word-break: break-all;
+}
+
+.right {
+    text-align: center;
+    line-height: 52px;
+    font-size: 34rpx;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10rpx;
+}
+
+.right-up {
+    text-align: center;
+    color: green;
+}
+
+.right-mid {
+    line-height: 30rpx;
+}
+
+.right-down {
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    line-height: 52px;
+    font-size: 34rpx;
+    margin-right: auto;
+}
+
+.left-up {
+}
+
+.left-mid {
+    line-height: 30rpx;
+}
+
+.left-down {
+}
+
+.right2 {
+    margin: auto;
+    text-align: center;
+    font-size: 50rpx;
+    color: red;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40rpx;
+    height: auto;
+    width: 100%;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: none;
+    border-right: none;
+    transition: all 300ms ease;
+}
+
+.item-up {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 34rpx;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+}
+
+.item-up-text2 {
+    color: green;
+}
+
+.item-up-text3 {
+}
+
+.item-down {
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: 5%;
+    margin-right: 5%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 30rpx;
+}
+
+.item-down-text2 {
+    color: red;
+}
+
+.sliders {
+    width: 100%;
+    position: fixed;
+    bottom: 120rpx;
+    background: #f6f6f6;
+}
+
+.cancel {
+    border: 1px solid #ccc;
+    width: 19%;
+    height: 122rpx;
+    line-height: 122rpx;
+    text-align: center;
+    font-size: 32rpx;
+    position: fixed;
+    bottom: 120rpx;
+    right: 1rpx;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20rpx;
+    height: auto;
+    width: 100%;
+    background: #fff;
+    border-left: none;
+    border-right: none;
+    transition: all 300ms ease;
+}
+
+.item-up {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 34rpx;
+}
+
+.timg {
+    margin-top: 10rpx;
+    width: 40rpx;
+    height: 30rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+}
+
+.item-up-text {
+    font-size: 36rpx;
+    font-weight: bold;
+}
+
+.item-up-text2 {
+    color: #007aff;
+}
+
+.item-up-text3 {
+    color: red;
+}
+
+.item-up-text4 {
+    color: green;
+}
+
+.item-down-text {
+}
+
+.item-down-text2 {
+    color: red;
+}
+
+.item-mid {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 30rpx;
+    margin-top: 20rpx;
+}
+
+.road {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 5rpx;
+    width: 100%;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: none;
+    border-right: none;
+    transition: all 300ms ease;
+    height: auto;
+    line-height: 60rpx;
+    font-size: 34rpx;
+}
+
+.road-text {
+    margin-left: 5%;
+}
+
+.road-text2 {
+    margin-right: 5%;
+}
+
+.roadlist-text {
+    display: flex;
+    justify-content: center;
+}
+
+.map-button {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.road-up {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.road-down {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: auto;
+    justify-content: space-between;
+}
+
+.road-down-left {
+    display: flex;
+    flex-direction: row;
+}
+
+.road-down-right {
+    display: flex;
+    flex-direction: row;
+}
+
+.road-down-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.road2 {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 20rpx;
+    margin-top: 20rpx;
+}
+
+.road-item {
+    margin-bottom: 20rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.road-item-text {
+    margin-top: 20rpx;
+    display: flex;
+    writing-mode: vertical-rl;
+    font-size: 30rpx;
+}
+
+.road-image-road {
+    height: 30rpx;
+    width: 80rpx;
+}
+
+.road-image-car {
+    height: 70rpx;
+    width: 80rpx;
+}
+
+.box {
+    background-color: #fff;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.timebox {
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 50%;
+    align-items: center;
+}
+
+.timebox-text {
+    font-size: 32rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.timebox-text-time {
+    font-size: 40rpx;
+}
+
+.item-mid {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 30rpx;
+}
+
+.passenger {
+    margin-top: 20rpx;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.passenger-top {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.passenger-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.passenger-top-text {
+    margin-left: 5%;
+    font-size: 36rpx;
+}
+
+.up-down {
+    margin-right: 5%;
+    margin-top: 10rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.passenger-mid {
+    background-color: #fff;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    font-size: 25rpx;
+    margin-left: 3%;
+    margin-right: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.in-out {
+    margin-top: 5rpx;
+    width: 30rpx;
+    height: 35rpx;
+}
+
+.chair {
+    margin-top: 25rpx;
+    width: 60rpx;
+    height: 40rpx;
+}
+
+.passenger-mid-item {
+    width: 25%;
+    margin: auto;
+    text-align: right;
+}
+
+.passenger-mid-item2 {
+    width: 25%;
+    margin: auto;
+    text-align: left;
+}
+
+.passenger-mid-name {
+    width: 30%;
+    margin: auto;
+}
+
+.switch {
+    margin: auto;
+    /* margin-top: 30rpx;
+  margin-bottom: 10rpx;
+  margin-left: 10rpx; */
+    zoom: 0.6;
+}
+
+.switch1 {
+    margin-top: 25rpx;
+    margin-bottom: 10rpx;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+.call-button {
+    margin: auto;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.content {
+    margin: 0 auto;
+    margin-top: 200rpx;
+    height: 80rpx;
+    border: 1rpx solid #ddd;
+}
+
+.box {
+    /* width: 120rpx; */
+    height: 80rpx;
+    background-color: orange;
+}

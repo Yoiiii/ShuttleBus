@@ -1,0 +1,10 @@
+D:\SourceWu\Documents\Visual Studio 2005\Projects\CDWebSer\CDWebSer\obj\Debug\ResolveAssemblyReference.cache
+D:\SourceWu\Documents\Visual Studio 2005\Projects\CDWebSer\CDWebSer\bin\CDWebSer.dll
+D:\SourceWu\Documents\Visual Studio 2005\Projects\CDWebSer\CDWebSer\bin\CDWebSer.pdb
+D:\SourceWu\Documents\Visual Studio 2005\Projects\CDWebSer\CDWebSer\obj\Debug\CDWebSer.dll
+D:\SourceWu\Documents\Visual Studio 2005\Projects\CDWebSer\CDWebSer\obj\Debug\CDWebSer.pdb
+D:\Shares\CDWebSer\bin\CDWebSer.dll
+D:\Shares\CDWebSer\bin\CDWebSer.pdb
+D:\Shares\CDWebSer\obj\Debug\ResolveAssemblyReference.cache
+D:\Shares\CDWebSer\obj\Debug\CDWebSer.dll
+D:\Shares\CDWebSer\obj\Debug\CDWebSer.pdb

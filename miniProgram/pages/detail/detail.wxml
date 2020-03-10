@@ -1,0 +1,129 @@
+<view class="up">
+  <view class="item">
+    <view class="item-up">
+      <view class="item-up-text">{{location}}
+        <image class="timg" src="../../image/timg.png"></image>{{destination}}</view>
+      <view class="item-up-text2">{{carID}}</view>
+      <view wx:if="{{status==0}}" class="item-up-text3">未開始</view>
+      <view wx:elif="{{status==1}}" class="item-up-text4">進行中</view>
+      <view wx:elif="{{status==2}}" class="item-up-text4">待確認</view>
+      <view wx:else class="item-up-text2">已完成</view>
+    </view>
+    <view class="item-down">
+      <view class="item-down-text">開始時間:{{time}}</view>
+      <view class="item-down-text">{{name}}</view>
+      <image wx:if="{{tel}}" class="callIcon" src="../../image/call.png" bindtap="call" data-tel="{{tel}}" data-name="{{name}}"></image>
+      <image wx:else class="callIcon" src="../../image/nocar.png"></image>
+      <image data-planid="{{planRID}}" class="mapIcon" src="../../image/openmap.png" bindtap="jumptomap"></image>
+    </view>
+  </view>
+</view>
+<block wx:if="{{status!=3}}">
+<route-map roadlist="{{roadlist}}" planrid="{{PlanRID}}" type="{{type}}" bindjumptomap="jumptomap"></route-map>
+  <!-- <scroll-view scroll-x>
+    <view class="road2">
+      <block wx:for="{{roadlist}}" wx:for-item="roadlist" wx:key="{{index + 1}}">
+        <view class='road-item' bindtap="station" data-no="{{roadlist.no}}">
+          <image wx:if="{{roadlist.car}}" class='road-image-car' src='../../image/{{roadlist.car}}.png'></image>
+          <image wx:if="{{roadlist.road}}" class='road-image-road' src='../../image/{{roadlist.road}}.png'></image>
+          <view class='road-item-text'>{{roadlist.location}}</view>
+        </view>
+      </block>
+    </view>
+  </scroll-view> -->
+    <!-- <view style="display:flex; flex-direction: row;">
+    <view class="road3">
+      <scroll-view scroll-x>
+        <view class="road2">
+          <block wx:for="{{roadlist}}" wx:for-item="roadlist" wx:key="{{index + 1}}">
+            <view class='road-item' bindtap="station" data-no="{{roadlist.no}}">
+              <image wx:if="{{roadlist.car}}" class='road-image-car' src='../../image/{{roadlist.car}}.png'></image>
+              <image wx:if="{{roadlist.road}}" class='road-image-road' src='../../image/{{roadlist.road}}.png'></image>
+              <view class='road-item-text'>{{roadlist.location}}</view>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="mapIcon3">
+      <image data-planid="{{PlanRID}}" class="mapIcon2" src="../../image/openmap.png" bindtap="jumptomap"></image>
+    </view>
+  </view> -->
+</block>
+
+<scroll-view scroll-y>
+  <view class="roadslist">
+    <view class="roadslist-mid">
+          <view class="roadslist-mid-item">
+        <view>發車時間:</view>
+      </view>
+      <view class="roadslist-mid-itemS">
+        <view>{{startTime}}</view>
+      </view>
+    </view>
+    <view class="roadslist-mid">
+      <view class="roadslist-mid-item">
+        <view>站點</view>
+      </view>
+      <view class="roadslist-mid-item">
+        <view>到達時間</view>
+      </view>
+      <image class="timg2" src="../../image/nocar.png"></image>
+      <view class="roadslist-mid-item2">
+        <view>離開時間</view>
+      </view>
+    </view>
+    <block wx:for="{{roadslist}}" wx:for-item="roadslist" wx:key="index">
+      <view class="roadslist-mid">
+        <view class="roadslist-mid-item">
+          <view>{{roadslist.location}}</view>
+        </view>
+        <view class="roadslist-mid-item">
+          <view>{{roadslist.atime}}</view>
+        </view>
+        <image class="timg2" src="../../image/nocar.png"></image>
+        <view class="roadslist-mid-item2">
+          <view>{{roadslist.ltime}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</scroll-view>
+<scroll-view scroll-y class="passengerslist">
+  <block wx:if="{{passengers}}">
+    <view class="passenger">
+      <view class="passenger-mid">
+        <image class="call-button" src="../../image/nocar.png" bindtap="call" data-tel="{{passengers.tel}}" data-name="{{passengers.name}}"></image>
+        <view class="passenger-mid-name">乘客姓名</view>
+        <view class="passenger-mid-item">
+          <view>上車點</view>
+        </view>
+        <image class="timg2" src="../../image/nocar.png"></image>
+        <view class="passenger-mid-item2">
+          <view>下車點</view>
+        </view>
+        <view class="passenger-mid-item3">
+          <view>時間</view>
+        </view>
+      </view>
+      <block wx:for="{{passengers}}" wx:for-item="passengers" wx:key="index">
+        <view class="passenger-mid">
+          <image wx:if="{{passengers.tel}}" class="call-button" src="../../image/call.png" bindtap="call" data-tel="{{passengers.tel}}" data-name="{{passengers.name}}"></image>
+          <image wx:else class="call-button" src="../../image/nocar.png"></image>
+          <view class="passenger-mid-name">{{passengers.name}}</view>
+          <view class="passenger-mid-item">
+            <view>{{passengers.location}}</view>
+          </view>
+          <image class="timg2" src="../../image/timg.png"></image>
+          <view class="passenger-mid-item2">
+            <view>{{passengers.destination}}</view>
+          </view>
+          <view class="passenger-mid-item3">
+            <view>{{passengers.confirmTime}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+</scroll-view>

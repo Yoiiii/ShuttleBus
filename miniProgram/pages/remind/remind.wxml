@@ -1,0 +1,20 @@
+<view class="pages">
+  <block wx:if="{{result}}">
+    <form bindsubmit="submit" report-submit='true'>
+      <view class="title">行車任務</view>
+      <van-cell-group title="行車任務" >
+        <van-cell title="路線" value="{{location}}->{{destination}}" value-class="value"/>
+        <van-cell title="車牌" value="{{carID}}" value-class="value" />
+        <van-cell title="{{timetype}}" value="{{time}}"  />
+      </van-cell-group>
+      <view style="margin-top:160rpx;"></view>
+      <button form-type="submit" type="primary" style="margin: 10rpx;">{{buttontext}}</button>
+    </form>
+    <!--<view class="tip">
+      <view class="title">{{title}}</view>
+      <view class="road">{{location}}->{{destination}}</view>
+      <view class="carID">車牌:{{carID}}</view>
+      <view class="time">{{timetype}}:{{time}}</view>
+    </view>-->
+  </block>
+</view>

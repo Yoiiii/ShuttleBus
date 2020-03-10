@@ -1,0 +1,124 @@
+/*-------------------------------------------------------
+ All Rights Reserved, Copyright (C) 2013, Uiyeguo, Ltd.
+-------------------------------------------------------*/
+
+body { font:12px/1.2em Microsoft YaHei;}
+
+a,
+a:link { color:#000; text-decoration:none; outline:none;}
+a:hover,
+a:focus { text-decoration:none; color:#444;}
+
+.pd3 { padding:3px;}
+.pd5 { padding:5px;}
+.pd10 { padding:10px;}
+
+label,
+button,
+input,
+select,
+textarea { font-size:12px; vertical-align: middle;}
+
+input,
+button,
+select,
+textarea { font:12px/1.2em Microsoft YaHei;}
+
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] { cursor: pointer;}
+
+.tabs-tool { border-top:0;}
+.Ui-text,
+.Ui-textarea { padding:3px; border:1px #95b8e7 solid; width:260px;}
+.Ui-text { height:14px; line-height:14px; }
+
+.Ui-header { height:70px; position:relative; z-index:0; overflow:hidden; border-bottom:1px #95b8e7 solid; background:url(../images/bg_header.jpg) bottom repeat-x;}
+.Ui-header-left { position:absolute; z-index:1; left:15px; top:0;}
+.Ui-header-left h1 { font:20px/20px Verdana; color:#fff;}
+.Ui-header-right { position:absolute; z-index:1; right:5px; top:0; color:#fff; text-align:right;}
+.Ui-header-right p { line-height:0.7em;}
+.Ui-header-right a { color:#fff; margin:0 5px;}
+
+.Ui-sidebar { width:160px;}
+.Ui-side-tree .tree-node { padding:3px 0px; }
+.Ui-side-tree a { display:block;}
+.Ui-side-tree .tree-node-selected { padding:2px 0; border:1px #fade23 solid;}
+
+.Ui-toolbar-button,
+.Ui-toolbar-search { padding:3px 5px;}
+
+.Ui-footer { height:20px; padding:5px; text-align:center; overflow:hidden; background:#e0ecff;}
+
+
+.panel-header_toorbar{ background-color: #E0ECFF;
+  background: -webkit-linear-gradient(top,#EFF5FF 0,#E0ECFF 100%);
+  background: -moz-linear-gradient(top,#EFF5FF 0,#E0ECFF 100%);
+  background: -o-linear-gradient(top,#EFF5FF 0,#E0ECFF 100%);
+  background: linear-gradient(to bottom,#EFF5FF 0,#E0ECFF 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#EFF5FF,endColorstr=#E0ECFF,GradientType=0); height:35px;
+  border:1px solid #95B8E7;  
+}
+ 
+.l-btn {
+  color: #444;
+  background-repeat: repeat-x;
+  /*
+  border: 1px solid #bbb;
+  background: #fafafa;
+  background: -webkit-linear-gradient(top,#ffffff 0,#eeeeee 100%);
+  background: -moz-linear-gradient(top,#ffffff 0,#eeeeee 100%);
+  background: -o-linear-gradient(top,#ffffff 0,#eeeeee 100%);
+  background: linear-gradient(to bottom,#ffffff 0,#eeeeee 100%);
+*/
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#eeeeee,GradientType=0);
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+.sett span{color:White}
+
+.Header_Contant{margin-top: 10px;  float:right}
+.Header_Contant a{color:White}
+.Header_Contant a:hover{color:Black}
+
+
+#seachbar{ margin-top:2px;}
+.accordion-header.accordion-header-selected { background-color:#e0ecff}
+
+.search-container{ position:relative;margin-top:-35px;float:left; width:100%}
+.search-content {background-color:#eaf2ff;width:100%}
+.search-content>.item{float:left; padding-bottom:10px;background-color:#eaf2ff}
+
+.button-bar{float:right}
+.button-bar>.item{float:left}
+
+.pageContent{margin-bottom:5px;}
+
+.bott{background-color:white;}
+
+#bottom_btn{text-align:center;width:95%; position:absolute; bottom:5%;margin:0 auto}
+
+.Form_item{padding-bottom:20px;}
+
+.User_Contant{ float:right;margin-top:15px; margin-right:6px}
+
+#Car_Info{padding:5px}
+
+#Car_Mang{padding:5px}
+
+.User{font-weight:bold;width:10px}
+.dep{ font-weight:bold; }
+.Posi{ font-weight:bold; }
+
+
+.panel-body.panel-body-noheader.panel-body-noborder
+{
+    overflow:hidden;
+}

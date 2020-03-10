@@ -1,0 +1,629 @@
+@import "/common/car.wxss";
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+.mapIcon2{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 2rpx; 
+  margin-bottom: 3rpx;
+  margin-left: auto;
+  margin-right: 20rpx;
+}
+.mapIcon2:active{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 5rpx; 
+  margin-bottom: 0rpx;
+  margin-left: auto;
+  margin-right: 20rpx;
+}
+
+.travel {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 20rpx;
+  /*width: 96%;
+  border-radius: 10px;
+  -moz-border-radius: 25px;
+  box-shadow: 0 0 2px #acaaaa;
+  margin-left: 2%;
+  margin-right: 2%;*/
+}
+.road3{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+.travel-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20rpx;
+}
+
+.travel-info-route {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.travel-info-route-start {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.travel-info-route-end {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.travel-info-route-start-text {
+  font-size: 40rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.travel-info-route-start-time {
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  font-size: 26rpx;
+  justify-content: center;
+}
+
+.travel-info-route-start-time2 {
+  font-size: 32rpx;
+  color: orange;
+}
+
+.travel-info-route-end-text {
+  font-size: 40rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.travel-info-route-end-time {
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  font-size: 26rpx;
+  justify-content:center;
+}
+
+.travel-info-route-end-time2 {
+  font-size: 36rpx;
+  color: orange;
+
+}
+
+.travel-info-route-status {
+  display: block;
+  color: red;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.travel-info-route-status2 {
+  color: green;
+  display: block;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+    margin-right:0;
+  margin-left: auto;
+}
+
+.travel-info-driver-call {
+  margin-left: 10rpx;
+   margin-top: 5rpx; 
+  margin-bottom: 3rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.travel-info-driver-call:active {
+  margin-left: 10rpx;
+  margin-bottom: 0rpx;
+  margin-top: 7rpx;
+}
+
+.travel-info-car {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+  /* margin-top: 10rpx;
+  margin-bottom: 10rpx; */
+}
+
+.travel-info-driver {
+  display: flex;
+  flex-direction: row;
+}
+
+.road2 {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+.mapIcon3{
+  display: flex;
+  flex-direction:column;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 20rpx;
+  height: auto;
+  width: 10%;
+  align-content:center;
+  justify-content:center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 20rpx;
+}
+.result-null {
+  margin-top: 50rpx;
+  color: rgb(170, 165, 165);
+  font-size: 60rpx;
+  text-align: center;
+}
+
+.travel-info-carNo {
+    text-decoration:underline;
+ margin-left: 20rpx;
+  margin-right: auto; 
+  color: blue;
+  font-size: 38rpx;
+}
+.travel-info-carNo2 {
+ margin-left: 20rpx;
+  margin-right: auto; 
+  color: blue;
+  font-size: 38rpx;
+}
+.travel-info-carType {
+  /* margin-left: 20rpx; */
+  /* color: blue;
+  font-size: 40rpx;  */
+  margin-right: 10rpx;
+  margin-top: 8rpx;
+  width: 36rpx;      
+ height: 36rpx;      
+ border: 1px solid black;      
+ border-radius: 4px;      
+}
+
+.travel-info-driver-name {
+  font-size: 38rpx;
+  margin-right: 40rpx;
+}
+.travel-info-driver-name2 {
+  font-size: 38rpx;
+  margin-right: 40rpx;
+  text-decoration:underline;
+}
+
+.call-button {
+  margin: 5rpx;
+  height: 60rpx;
+  width: 60rpx;
+}
+
+.call-button:active {
+  margin-top: 10rpx;
+  margin-bottom: 0rpx;
+  margin-left: 10rpx;
+  margin-right: 0rpx;
+}
+
+.button-cancel {
+  width: 26%;
+  font-size: 32rpx;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  bottom: 120rpx;
+  right: 0;
+}
+
+/*/////////////////////////////////////*/
+
+/**index.wxss**/
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.line {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40rpx;
+  height: auto;
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  transition: all 300ms ease;
+}
+
+.item-up {
+  margin-left: 5%;
+  margin-right: 5%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  font-size: 34rpx;
+  margin-top: 20rpx;
+}
+
+.item-mid {
+  margin-left: 5%;
+  margin-right: 5%;
+  height: auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+.item-down {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left: 5%;
+  margin-right: 5%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.item-up-text {
+  color: green;
+  font-size: 46rpx;
+  font-weight: bold;
+}
+
+.item-up-text2 {
+  color: green;
+  font-size: 32rpx;
+}
+
+.item-up-text3 {
+  color: red;
+  font-size: 32rpx;
+  line-height: 46rpx;
+  align-items: center;
+}
+
+.item-down-text {
+  font-size: 32rpx;
+}
+
+.item-down-text2 {
+  color: red;
+}
+
+.sliders {
+  width: 100%;
+  align-items: center;
+  background-color: #f6f6f6;
+  position: fixed;
+  bottom: 120rpx;
+}
+
+.sliders--slidersBox {
+  margin: 0 auto;
+}
+
+.item-down-text {
+  margin-top: 10rpx;
+}
+
+.item-down-text2 {
+  color: red;
+}
+
+.road {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  transition: all 300ms ease;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+}
+
+.road-text {
+  margin-left: 5%;
+}
+
+.road-text2 {
+  margin-right: 5%;
+}
+
+.roadlist-text {
+  display: flex;
+  justify-content: center;
+}
+
+.map-button {
+  margin-top: 20rpx;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.road-item {
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.road-item-text {
+  margin-top: 20rpx;
+  display: flex;
+  writing-mode: vertical-lr;
+  font-size: 30rpx;
+}
+
+.road-image-road {
+  height: 30rpx;
+  width: 80rpx;
+}
+
+.road-image-car {
+  height: 70rpx;
+  width: 80rpx;
+}
+
+.box {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.timebox {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #f6f6f6;
+  width: 50%;
+  align-items: center;
+}
+
+.timebox2 {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  width: 100%;
+  align-items: center;
+}
+
+.timebox-text {
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.timebox-text-time {
+  font-size: 40rpx;
+}
+
+.two {
+  width: 0rpx;
+  height: 0rpx;
+  border-top: 20rpx solid #f6f6f6;
+  border-left: 20rpx solid transparent;
+  border-right: 20rpx solid transparent;
+  border-bottom: 20rpx solid transparent;
+}
+
+.one {
+  width: 0rpx;
+  height: 0rpx;
+  border-top: 20rpx solid transparent;
+  border-left: 20rpx solid transparent;
+  border-right: 20rpx solid transparent;
+  border-bottom: 20rpx solid transparent;
+}
+
+.box2 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+.box2:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  left: 200px;
+  top: 20px;
+  border-left: 10px solid #000;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.box2:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  left: 200px;
+  top: 23px;
+  border-left: 7px solid #fff;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.passenger {
+  margin-top: 20rpx;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 120rpx;
+}
+
+
+.passenger-top {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  justify-content: space-between;
+  height: 60rpx;
+}
+
+.passenger-top-text {
+  margin-left: 5%;
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+
+.up-down {
+  margin-right: 5%;
+  margin-top: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: 10rpx;
+}
+
+.passenger-mid {
+  padding: 10rpx 2rpx 10rpx 2rpx;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #fff;
+  font-size: 26rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  height: 50rpx;
+}
+
+.in-out {
+  margin-top: 5rpx;
+  width: 40rpx;
+  height: 35rpx;
+}
+
+.chair {
+  /* margin-top: 10rpx; */
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+  margin: auto;
+}
+
+.passenger-mid-item {
+/* display: flex;
+  justify-content: flex-end; 
+  flex-direction: row; */
+  margin: auto;
+  width: 26%;
+  text-align: right;
+}
+.passenger-mid-item2 {
+ /* margin-top: 5rpx;
+  margin-bottom: 10rpx; 
+  display: flex;
+  flex-direction: row; */
+  margin: auto;
+  width: 26%;
+  /* justify-content: flex-start; */
+  text-align: left;
+}
+
+.passenger-mid-name {
+  /* margin-top: 10rpx;
+  margin-bottom: 10rpx; */
+  margin: auto;
+  width: 35%;
+  text-align: left;
+}
+
+.tip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tip1 {
+  margin-top: 30rpx;
+}
+
+.tip2 {
+  margin-top: 30rpx;
+  font-size: 32rpx;
+}
+
+.timg {
+  height: 50rpx;
+  width: 50rpx;
+  margin-top: 5rpx;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timg2 {
+   /* margin-top: 5rpx; */
+  height: 40rpx;
+  width: 40rpx;
+  /* margin-left: auto; */
+  margin: auto;
+}

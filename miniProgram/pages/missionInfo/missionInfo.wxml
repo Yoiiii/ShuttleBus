@@ -1,0 +1,65 @@
+<van-notify id="blue-notify" />
+<van-dialog id="van-dialog" />
+<block wx:if="{{result}}">
+    <view class="up">
+        <view class="item">
+            <view class="item-up">
+                <view class="item-up-text">{{location}}
+                    <image class="timg" src="../../image/timg.png"></image>{{destination}}</view>
+                                <view wx:if="{{status==0}}" class="item-up-text3">未開始</view>
+                <view wx:elif="{{status==1 && !pause}}" class="item-up-text4" bindlongtap="pause">進行中</view>
+                <view wx:elif="{{status==2}}" class="item-up-text4">待確認</view>
+                <view wx:elif="{{pause}}" bindlongtap="goon" class="item-up-text3">暫停中</view>
+                <view wx:else class="item-up-text2">已完成</view>
+            </view>
+            <view class="item-down">
+                <view class="item-down-text">開始時間:{{time}}</view>
+                <view class="item-up-text2">{{carID}}</view>
+
+            </view>
+        </view>
+    </view>
+    <view class="roadlist">
+    </view>
+    <scroll-view scroll-x>
+        <!-- <view class="road2">
+      <block wx:for="{{roadlist}}" wx:for-item="roadlist" wx:key="{{index + 1}}">
+        <view class='road-item' bindtap="station" data-no="{{roadlist.no}}">
+          <image wx:if="{{roadlist.car}}" class='road-image-car' src='../../image/{{roadlist.car}}.png'></image>
+          <image wx:if="{{roadlist.road}}" class='road-image-road' src='../../image/{{roadlist.road}}.png'></image>
+          <view class='road-item-text'>{{roadlist.location}}</view>
+        </view>
+      </block>
+    </view> -->
+        <route-map roadlist="{{roadlist}}" planrid="{{PlanRID}}" type="{{type}}" bindjumptomap="jumptomap" bindshowCar="showCar"></route-map>
+    </scroll-view>
+    <scroll-view scroll-y class="passengerslist">
+        <block wx:if="{{passengers}}">
+            <view class="passenger">
+                <block wx:for="{{passengers}}" wx:for-item="passengers" wx:key="index">
+                    <view class="passenger-mid">
+                        <image wx:if="{{passengers.tel}}" class="call-button" src="../../image/call.png" bindtap="call" data-tel="{{passengers.tel}}" data-name="{{passengers.name}}"></image>
+                        <image wx:else class="call-button" src="../../image/nocar.png"></image>
+                        <view class="passenger-mid-name">{{passengers.name}}</view>
+                        <view class="passenger-mid-item">
+                            <view style="margin: auto;">{{passengers.location}}</view>
+                        </view>
+                        <image class="timg2" src="../../image/timg.png"></image>
+                        <view class="passenger-mid-item2">
+                            <view style="margin: auto;">{{passengers.destination}}</view>
+                        </view>
+                        <switch class="switch" checked='{{passengers.confirmTime}}' data-RID="{{passengers.RID}}" data-confirmTime="{{passengers.confirmTime}}" bindchange="driverCheck"></switch>
+                    </view>
+                </block>
+            </view>
+        </block>
+    </scroll-view>
+    <image class="block"></image>
+    <view class="sliders" style='padding-bottom:{{ isIphoneX ? 68 : 0 }}rpx;'>
+        <sliders id="sliders" hint="{{hint}}" pullStatus="true" bindmyevent="myEventListener"></sliders>
+    </view>
+    <button class="cancel" style='bottom:{{ isIphoneX ? 188 : 120 }}rpx;' type="warn" bindtap="cancel" disabled="{{status==0}}">撤回</button>
+</block>
+<block wx:else>
+    <view style="text-align:center ;margin-top:60rpx;color:gray;text-size:120rpx;">當前暫無任務</view>
+</block>

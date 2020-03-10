@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<tab-switch tabTitle="{{planList}}" tabName="type" curIndex="0" bindtabChange="tabChangeIndex">
+  <view class="container">
+    <view class="text6">僅顯示近30天的記錄</view>
+    <block wx:for="{{planList}}" wx:for-index="idxs" wx:for-item="planList" wx:key="id">
+      <view hidden='{{idx!=idxs}}' class="list">
+        <block wx:for="{{planList.travelList}}" wx:for-item="travelList" wx:key="index">
+          <block wx:if='{{planList.travelList}}'>
+          <list-item travelList="{{travelList}}"></list-item>
+            <!-- <view class="item">
+              <view class="item-up">
+                <view class="item-up-text">{{travelList.location}}->{{travelList.destination}}</view>
+                <view class="item-up-text2">{{travelList.carID}}</view>
+                <view wx:if="{{travelList.status==0}}" class="item-up-text3">未开始</view>
+                <view wx:elif="{{travelList.status==1}}" class="item-up-text4">進行中</view>
+                <view wx:elif="{{travelList.status==1}}" class="item-up-text4">待确认</view>
+                <view wx:else class="item-up-text2">已完成</view>
+              </view>
+              <view class="item-mid">
+                <view class="item-down-text">開始時間:{{travelList.time}}</view>
+              </view>
+            </view> -->
+          </block>
+          <block wx:else>
+            <view class="text6">暫無記錄</view>
+          </block>
+        </block>
+      </view>
+    </block>
+    <view class="block"></view>
+  </view>
+</tab-switch>

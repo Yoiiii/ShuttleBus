@@ -1,0 +1,101 @@
+﻿
+
+
+body
+{
+    background-image:url("../images/Login_Bg.png");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+a
+{
+	text-decoration:none;
+	text-align:center;
+	color:White;
+}
+
+.Title
+{
+	font-size:30px;
+	font-weight:bold;
+	color:orange;
+	margin-left:-15px;
+	margin-bottom:15px;
+}
+.middle span
+{
+	font-size:14px;
+}
+
+#Login_Info
+{
+    right:10%; 
+    position:fixed;
+    top:20%;
+    background:white;
+    padding:10px;
+    border-radius:20px;
+    -moz-border-radius:20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.easyui-textbox
+{
+	width:250px;
+	height:60px;
+	padding:10px;
+}
+
+
+.easyui-passwordbox
+{
+	width:250px;
+	height:60px;
+	padding:10px;
+}
+
+#Login_Form
+{
+	padding:0 10px 0 30px;
+	width:330px;
+	height:320px;
+}
+
+.easyui-textbox Desi
+{
+	margin-bottom:20px;
+	
+}
+
+.textbox {
+    position: relative;
+    border: 1px solid #95B8E7;
+    background-color: #fff;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 15px;
+    padding: 0;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.submit
+{
+	display:block;
+	width:100px;
+	background-color:Orange;
+	padding:10px;
+	
+	
+}
+
+#lang
+{
+	width:100px;
+}

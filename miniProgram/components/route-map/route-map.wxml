@@ -1,0 +1,20 @@
+  <view style="display:flex; flex-direction: row;">
+    <view class="road3">
+      <scroll-view scroll-x>
+        <view class="road2">
+          <block wx:for="{{roadlist}}" wx:for-item="roadlist" wx:key="index">
+            <view class='road-item' bindtap="station" data-no="{{roadlist.no}}">
+              <image wx:if="{{roadlist.car == 'nocar'}}" class='road-image-car' src='../../image/car/{{roadlist.car}}.png'></image>
+              <image wx:elif="{{type == ''}}" class='road-image-car' src='../../image/car/car.png' bindtap="bindtapCar"></image>
+              <image wx:else class='road-image-car' src='../../image/car/{{type}}.png' bindtap="bindtapCar" ></image>
+              <image wx:if="{{roadlist.road}}" class='road-image-road' src='../../image/{{roadlist.road}}.png'></image>
+              <view class='road-item-text'>{{roadlist.location}}</view>
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- <view class="mapIcon3">
+      <image data-planid="{{planrid}}" class="mapIcon2" src="../../image/openmap.png" bindtap="jumptomap"></image>
+    </view> -->
+  </view>

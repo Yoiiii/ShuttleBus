@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "route-map": "../../components/route-map/route-map"
+  },
+  "enablePullDownRefresh": true
+}

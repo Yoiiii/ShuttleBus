@@ -1,0 +1,2086 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="seedsms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="seedsmsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="seedsmsToDriver">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="seedsmsToDriverResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="seedsmsToAdmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="seedsmsToAdminResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loginResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Binding">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BindingResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserInfoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTravel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTravelResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMission">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMissionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="passengerConfirm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="plsID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="passengerConfirmResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="passengerCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="plsID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="passengerCancelResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="dirverConfirm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dirverConfirmResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="driverUpdataGPS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="longitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="latitude" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="driverUpdataGPSResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="driverSubmit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="confirmType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="driverSubmitResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="driverConfirmA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="confirmType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="driverConfirmAResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="driverCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cancelType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="driverCancelResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="dirverConfirm2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dirverConfirm2Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMissionList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMissionListResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTravelList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTravelListResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetForecastTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="latitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="longitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="destination" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetForecastTimeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLineTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="destination" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLineTimeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllLineTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllLineTimeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLocationResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="dirverMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="planRID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dirverMessageResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetALLMissionList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="driverID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="etime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CarID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetALLMissionListResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMissionDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="planID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMissionDetailResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllDriverList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllDriverListResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllCarList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sopenid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllCarListResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Test">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="seedsmsSoapIn">
+    <wsdl:part name="parameters" element="tns:seedsms" />
+  </wsdl:message>
+  <wsdl:message name="seedsmsSoapOut">
+    <wsdl:part name="parameters" element="tns:seedsmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="seedsmsToDriverSoapIn">
+    <wsdl:part name="parameters" element="tns:seedsmsToDriver" />
+  </wsdl:message>
+  <wsdl:message name="seedsmsToDriverSoapOut">
+    <wsdl:part name="parameters" element="tns:seedsmsToDriverResponse" />
+  </wsdl:message>
+  <wsdl:message name="seedsmsToAdminSoapIn">
+    <wsdl:part name="parameters" element="tns:seedsmsToAdmin" />
+  </wsdl:message>
+  <wsdl:message name="seedsmsToAdminSoapOut">
+    <wsdl:part name="parameters" element="tns:seedsmsToAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapIn">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapOut">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="BindingSoapIn">
+    <wsdl:part name="parameters" element="tns:Binding" />
+  </wsdl:message>
+  <wsdl:message name="BindingSoapOut">
+    <wsdl:part name="parameters" element="tns:BindingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTravelSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTravel" />
+  </wsdl:message>
+  <wsdl:message name="GetTravelSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTravelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMissionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMission" />
+  </wsdl:message>
+  <wsdl:message name="GetMissionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="passengerConfirmSoapIn">
+    <wsdl:part name="parameters" element="tns:passengerConfirm" />
+  </wsdl:message>
+  <wsdl:message name="passengerConfirmSoapOut">
+    <wsdl:part name="parameters" element="tns:passengerConfirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="passengerCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:passengerCancel" />
+  </wsdl:message>
+  <wsdl:message name="passengerCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:passengerCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="dirverConfirmSoapIn">
+    <wsdl:part name="parameters" element="tns:dirverConfirm" />
+  </wsdl:message>
+  <wsdl:message name="dirverConfirmSoapOut">
+    <wsdl:part name="parameters" element="tns:dirverConfirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="driverUpdataGPSSoapIn">
+    <wsdl:part name="parameters" element="tns:driverUpdataGPS" />
+  </wsdl:message>
+  <wsdl:message name="driverUpdataGPSSoapOut">
+    <wsdl:part name="parameters" element="tns:driverUpdataGPSResponse" />
+  </wsdl:message>
+  <wsdl:message name="driverSubmitSoapIn">
+    <wsdl:part name="parameters" element="tns:driverSubmit" />
+  </wsdl:message>
+  <wsdl:message name="driverSubmitSoapOut">
+    <wsdl:part name="parameters" element="tns:driverSubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="driverConfirmASoapIn">
+    <wsdl:part name="parameters" element="tns:driverConfirmA" />
+  </wsdl:message>
+  <wsdl:message name="driverConfirmASoapOut">
+    <wsdl:part name="parameters" element="tns:driverConfirmAResponse" />
+  </wsdl:message>
+  <wsdl:message name="driverCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:driverCancel" />
+  </wsdl:message>
+  <wsdl:message name="driverCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:driverCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="dirverConfirm2SoapIn">
+    <wsdl:part name="parameters" element="tns:dirverConfirm2" />
+  </wsdl:message>
+  <wsdl:message name="dirverConfirm2SoapOut">
+    <wsdl:part name="parameters" element="tns:dirverConfirm2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetMissionListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMissionList" />
+  </wsdl:message>
+  <wsdl:message name="GetMissionListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMissionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTravelListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTravelList" />
+  </wsdl:message>
+  <wsdl:message name="GetTravelListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTravelListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetForecastTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetForecastTime" />
+  </wsdl:message>
+  <wsdl:message name="GetForecastTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetForecastTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLineTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLineTime" />
+  </wsdl:message>
+  <wsdl:message name="GetLineTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLineTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLineTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllLineTime" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLineTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllLineTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLocation" />
+  </wsdl:message>
+  <wsdl:message name="GetLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="dirverMessageSoapIn">
+    <wsdl:part name="parameters" element="tns:dirverMessage" />
+  </wsdl:message>
+  <wsdl:message name="dirverMessageSoapOut">
+    <wsdl:part name="parameters" element="tns:dirverMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetALLMissionListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetALLMissionList" />
+  </wsdl:message>
+  <wsdl:message name="GetALLMissionListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetALLMissionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMissionDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMissionDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetMissionDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMissionDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDriverListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllDriverList" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDriverListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllDriverListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCarListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllCarList" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCarListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllCarListResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapIn">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="TestSoapOut">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="seedsmsHttpGetIn">
+    <wsdl:part name="rid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="seedsmsHttpGetOut" />
+  <wsdl:message name="seedsmsToDriverHttpGetIn">
+    <wsdl:part name="rid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="seedsmsToDriverHttpGetOut" />
+  <wsdl:message name="seedsmsToAdminHttpGetIn">
+    <wsdl:part name="rid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="seedsmsToAdminHttpGetOut" />
+  <wsdl:message name="loginHttpGetIn">
+    <wsdl:part name="code" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="loginHttpGetOut" />
+  <wsdl:message name="BindingHttpGetIn">
+    <wsdl:part name="userID" type="s:string" />
+    <wsdl:part name="tel" type="s:string" />
+    <wsdl:part name="code" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BindingHttpGetOut" />
+  <wsdl:message name="GetUserInfoHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoHttpGetOut" />
+  <wsdl:message name="GetTravelHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTravelHttpGetOut" />
+  <wsdl:message name="GetMissionHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMissionHttpGetOut" />
+  <wsdl:message name="passengerConfirmHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="plsID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="passengerConfirmHttpGetOut" />
+  <wsdl:message name="passengerCancelHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="plsID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="passengerCancelHttpGetOut" />
+  <wsdl:message name="dirverConfirmHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="RID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="dirverConfirmHttpGetOut" />
+  <wsdl:message name="driverUpdataGPSHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="rid" type="s:string" />
+    <wsdl:part name="longitude" type="s:string" />
+    <wsdl:part name="latitude" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="driverUpdataGPSHttpGetOut" />
+  <wsdl:message name="driverSubmitHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="rid" type="s:string" />
+    <wsdl:part name="confirmType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="driverSubmitHttpGetOut" />
+  <wsdl:message name="driverConfirmAHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="rid" type="s:string" />
+    <wsdl:part name="confirmType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="driverConfirmAHttpGetOut" />
+  <wsdl:message name="driverCancelHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="rid" type="s:string" />
+    <wsdl:part name="cancelType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="driverCancelHttpGetOut" />
+  <wsdl:message name="dirverConfirm2HttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="RID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="dirverConfirm2HttpGetOut" />
+  <wsdl:message name="GetMissionListHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMissionListHttpGetOut" />
+  <wsdl:message name="GetTravelListHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTravelListHttpGetOut" />
+  <wsdl:message name="GetForecastTimeHttpGetIn">
+    <wsdl:part name="latitude" type="s:string" />
+    <wsdl:part name="longitude" type="s:string" />
+    <wsdl:part name="destination" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetForecastTimeHttpGetOut" />
+  <wsdl:message name="GetLineTimeHttpGetIn">
+    <wsdl:part name="location" type="s:string" />
+    <wsdl:part name="destination" type="s:string" />
+    <wsdl:part name="time" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLineTimeHttpGetOut" />
+  <wsdl:message name="GetAllLineTimeHttpGetIn">
+    <wsdl:part name="RID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLineTimeHttpGetOut" />
+  <wsdl:message name="GetLocationHttpGetIn">
+    <wsdl:part name="location" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLocationHttpGetOut" />
+  <wsdl:message name="dirverMessageHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="fromid" type="s:string" />
+    <wsdl:part name="planRID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="dirverMessageHttpGetOut" />
+  <wsdl:message name="GetALLMissionListHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="driverID" type="s:string" />
+    <wsdl:part name="stime" type="s:string" />
+    <wsdl:part name="etime" type="s:string" />
+    <wsdl:part name="CarID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetALLMissionListHttpGetOut" />
+  <wsdl:message name="GetMissionDetailHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="planID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMissionDetailHttpGetOut" />
+  <wsdl:message name="GetAllDriverListHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDriverListHttpGetOut" />
+  <wsdl:message name="GetAllCarListHttpGetIn">
+    <wsdl:part name="sopenid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCarListHttpGetOut" />
+  <wsdl:message name="TestHttpGetIn" />
+  <wsdl:message name="TestHttpGetOut" />
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="seedsmsHttpPostIn">
+    <wsdl:part name="rid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="seedsmsHttpPostOut" />
+  <wsdl:message name="seedsmsToDriverHttpPostIn">
+    <wsdl:part name="rid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="seedsmsToDriverHttpPostOut" />
+  <wsdl:message name="seedsmsToAdminHttpPostIn">
+    <wsdl:part name="rid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="seedsmsToAdminHttpPostOut" />
+  <wsdl:message name="loginHttpPostIn">
+    <wsdl:part name="code" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="loginHttpPostOut" />
+  <wsdl:message name="BindingHttpPostIn">
+    <wsdl:part name="userID" type="s:string" />
+    <wsdl:part name="tel" type="s:string" />
+    <wsdl:part name="code" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BindingHttpPostOut" />
+  <wsdl:message name="GetUserInfoHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfoHttpPostOut" />
+  <wsdl:message name="GetTravelHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTravelHttpPostOut" />
+  <wsdl:message name="GetMissionHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMissionHttpPostOut" />
+  <wsdl:message name="passengerConfirmHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="plsID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="passengerConfirmHttpPostOut" />
+  <wsdl:message name="passengerCancelHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="plsID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="passengerCancelHttpPostOut" />
+  <wsdl:message name="dirverConfirmHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="RID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="dirverConfirmHttpPostOut" />
+  <wsdl:message name="driverUpdataGPSHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="rid" type="s:string" />
+    <wsdl:part name="longitude" type="s:string" />
+    <wsdl:part name="latitude" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="driverUpdataGPSHttpPostOut" />
+  <wsdl:message name="driverSubmitHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="rid" type="s:string" />
+    <wsdl:part name="confirmType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="driverSubmitHttpPostOut" />
+  <wsdl:message name="driverConfirmAHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="rid" type="s:string" />
+    <wsdl:part name="confirmType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="driverConfirmAHttpPostOut" />
+  <wsdl:message name="driverCancelHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="rid" type="s:string" />
+    <wsdl:part name="cancelType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="driverCancelHttpPostOut" />
+  <wsdl:message name="dirverConfirm2HttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="RID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="dirverConfirm2HttpPostOut" />
+  <wsdl:message name="GetMissionListHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMissionListHttpPostOut" />
+  <wsdl:message name="GetTravelListHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTravelListHttpPostOut" />
+  <wsdl:message name="GetForecastTimeHttpPostIn">
+    <wsdl:part name="latitude" type="s:string" />
+    <wsdl:part name="longitude" type="s:string" />
+    <wsdl:part name="destination" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetForecastTimeHttpPostOut" />
+  <wsdl:message name="GetLineTimeHttpPostIn">
+    <wsdl:part name="location" type="s:string" />
+    <wsdl:part name="destination" type="s:string" />
+    <wsdl:part name="time" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLineTimeHttpPostOut" />
+  <wsdl:message name="GetAllLineTimeHttpPostIn">
+    <wsdl:part name="RID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLineTimeHttpPostOut" />
+  <wsdl:message name="GetLocationHttpPostIn">
+    <wsdl:part name="location" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLocationHttpPostOut" />
+  <wsdl:message name="dirverMessageHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="fromid" type="s:string" />
+    <wsdl:part name="planRID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="dirverMessageHttpPostOut" />
+  <wsdl:message name="GetALLMissionListHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="driverID" type="s:string" />
+    <wsdl:part name="stime" type="s:string" />
+    <wsdl:part name="etime" type="s:string" />
+    <wsdl:part name="CarID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetALLMissionListHttpPostOut" />
+  <wsdl:message name="GetMissionDetailHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+    <wsdl:part name="planID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMissionDetailHttpPostOut" />
+  <wsdl:message name="GetAllDriverListHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllDriverListHttpPostOut" />
+  <wsdl:message name="GetAllCarListHttpPostIn">
+    <wsdl:part name="sopenid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCarListHttpPostOut" />
+  <wsdl:message name="TestHttpPostIn" />
+  <wsdl:message name="TestHttpPostOut" />
+  <wsdl:portType name="WeChatWSSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="seedsms">
+      <wsdl:input message="tns:seedsmsSoapIn" />
+      <wsdl:output message="tns:seedsmsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="seedsmsToDriver">
+      <wsdl:input message="tns:seedsmsToDriverSoapIn" />
+      <wsdl:output message="tns:seedsmsToDriverSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="seedsmsToAdmin">
+      <wsdl:input message="tns:seedsmsToAdminSoapIn" />
+      <wsdl:output message="tns:seedsmsToAdminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginSoapIn" />
+      <wsdl:output message="tns:loginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Binding">
+      <wsdl:input message="tns:BindingSoapIn" />
+      <wsdl:output message="tns:BindingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:input message="tns:GetUserInfoSoapIn" />
+      <wsdl:output message="tns:GetUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravel">
+      <wsdl:input message="tns:GetTravelSoapIn" />
+      <wsdl:output message="tns:GetTravelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMission">
+      <wsdl:input message="tns:GetMissionSoapIn" />
+      <wsdl:output message="tns:GetMissionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="passengerConfirm">
+      <wsdl:input message="tns:passengerConfirmSoapIn" />
+      <wsdl:output message="tns:passengerConfirmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="passengerCancel">
+      <wsdl:input message="tns:passengerCancelSoapIn" />
+      <wsdl:output message="tns:passengerCancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dirverConfirm">
+      <wsdl:input message="tns:dirverConfirmSoapIn" />
+      <wsdl:output message="tns:dirverConfirmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="driverUpdataGPS">
+      <wsdl:input message="tns:driverUpdataGPSSoapIn" />
+      <wsdl:output message="tns:driverUpdataGPSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="driverSubmit">
+      <wsdl:input message="tns:driverSubmitSoapIn" />
+      <wsdl:output message="tns:driverSubmitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="driverConfirmA">
+      <wsdl:input message="tns:driverConfirmASoapIn" />
+      <wsdl:output message="tns:driverConfirmASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="driverCancel">
+      <wsdl:input message="tns:driverCancelSoapIn" />
+      <wsdl:output message="tns:driverCancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dirverConfirm2">
+      <wsdl:input message="tns:dirverConfirm2SoapIn" />
+      <wsdl:output message="tns:dirverConfirm2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMissionList">
+      <wsdl:input message="tns:GetMissionListSoapIn" />
+      <wsdl:output message="tns:GetMissionListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelList">
+      <wsdl:input message="tns:GetTravelListSoapIn" />
+      <wsdl:output message="tns:GetTravelListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForecastTime">
+      <wsdl:input message="tns:GetForecastTimeSoapIn" />
+      <wsdl:output message="tns:GetForecastTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineTime">
+      <wsdl:input message="tns:GetLineTimeSoapIn" />
+      <wsdl:output message="tns:GetLineTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLineTime">
+      <wsdl:input message="tns:GetAllLineTimeSoapIn" />
+      <wsdl:output message="tns:GetAllLineTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <wsdl:input message="tns:GetLocationSoapIn" />
+      <wsdl:output message="tns:GetLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dirverMessage">
+      <wsdl:input message="tns:dirverMessageSoapIn" />
+      <wsdl:output message="tns:dirverMessageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetALLMissionList">
+      <wsdl:input message="tns:GetALLMissionListSoapIn" />
+      <wsdl:output message="tns:GetALLMissionListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMissionDetail">
+      <wsdl:input message="tns:GetMissionDetailSoapIn" />
+      <wsdl:output message="tns:GetMissionDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDriverList">
+      <wsdl:input message="tns:GetAllDriverListSoapIn" />
+      <wsdl:output message="tns:GetAllDriverListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCarList">
+      <wsdl:input message="tns:GetAllCarListSoapIn" />
+      <wsdl:output message="tns:GetAllCarListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input message="tns:TestSoapIn" />
+      <wsdl:output message="tns:TestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WeChatWSHttpGet">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="seedsms">
+      <wsdl:input message="tns:seedsmsHttpGetIn" />
+      <wsdl:output message="tns:seedsmsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="seedsmsToDriver">
+      <wsdl:input message="tns:seedsmsToDriverHttpGetIn" />
+      <wsdl:output message="tns:seedsmsToDriverHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="seedsmsToAdmin">
+      <wsdl:input message="tns:seedsmsToAdminHttpGetIn" />
+      <wsdl:output message="tns:seedsmsToAdminHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginHttpGetIn" />
+      <wsdl:output message="tns:loginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Binding">
+      <wsdl:input message="tns:BindingHttpGetIn" />
+      <wsdl:output message="tns:BindingHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:input message="tns:GetUserInfoHttpGetIn" />
+      <wsdl:output message="tns:GetUserInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravel">
+      <wsdl:input message="tns:GetTravelHttpGetIn" />
+      <wsdl:output message="tns:GetTravelHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMission">
+      <wsdl:input message="tns:GetMissionHttpGetIn" />
+      <wsdl:output message="tns:GetMissionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="passengerConfirm">
+      <wsdl:input message="tns:passengerConfirmHttpGetIn" />
+      <wsdl:output message="tns:passengerConfirmHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="passengerCancel">
+      <wsdl:input message="tns:passengerCancelHttpGetIn" />
+      <wsdl:output message="tns:passengerCancelHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dirverConfirm">
+      <wsdl:input message="tns:dirverConfirmHttpGetIn" />
+      <wsdl:output message="tns:dirverConfirmHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="driverUpdataGPS">
+      <wsdl:input message="tns:driverUpdataGPSHttpGetIn" />
+      <wsdl:output message="tns:driverUpdataGPSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="driverSubmit">
+      <wsdl:input message="tns:driverSubmitHttpGetIn" />
+      <wsdl:output message="tns:driverSubmitHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="driverConfirmA">
+      <wsdl:input message="tns:driverConfirmAHttpGetIn" />
+      <wsdl:output message="tns:driverConfirmAHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="driverCancel">
+      <wsdl:input message="tns:driverCancelHttpGetIn" />
+      <wsdl:output message="tns:driverCancelHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dirverConfirm2">
+      <wsdl:input message="tns:dirverConfirm2HttpGetIn" />
+      <wsdl:output message="tns:dirverConfirm2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMissionList">
+      <wsdl:input message="tns:GetMissionListHttpGetIn" />
+      <wsdl:output message="tns:GetMissionListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelList">
+      <wsdl:input message="tns:GetTravelListHttpGetIn" />
+      <wsdl:output message="tns:GetTravelListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForecastTime">
+      <wsdl:input message="tns:GetForecastTimeHttpGetIn" />
+      <wsdl:output message="tns:GetForecastTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineTime">
+      <wsdl:input message="tns:GetLineTimeHttpGetIn" />
+      <wsdl:output message="tns:GetLineTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLineTime">
+      <wsdl:input message="tns:GetAllLineTimeHttpGetIn" />
+      <wsdl:output message="tns:GetAllLineTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <wsdl:input message="tns:GetLocationHttpGetIn" />
+      <wsdl:output message="tns:GetLocationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dirverMessage">
+      <wsdl:input message="tns:dirverMessageHttpGetIn" />
+      <wsdl:output message="tns:dirverMessageHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetALLMissionList">
+      <wsdl:input message="tns:GetALLMissionListHttpGetIn" />
+      <wsdl:output message="tns:GetALLMissionListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMissionDetail">
+      <wsdl:input message="tns:GetMissionDetailHttpGetIn" />
+      <wsdl:output message="tns:GetMissionDetailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDriverList">
+      <wsdl:input message="tns:GetAllDriverListHttpGetIn" />
+      <wsdl:output message="tns:GetAllDriverListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCarList">
+      <wsdl:input message="tns:GetAllCarListHttpGetIn" />
+      <wsdl:output message="tns:GetAllCarListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input message="tns:TestHttpGetIn" />
+      <wsdl:output message="tns:TestHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WeChatWSHttpPost">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="seedsms">
+      <wsdl:input message="tns:seedsmsHttpPostIn" />
+      <wsdl:output message="tns:seedsmsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="seedsmsToDriver">
+      <wsdl:input message="tns:seedsmsToDriverHttpPostIn" />
+      <wsdl:output message="tns:seedsmsToDriverHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="seedsmsToAdmin">
+      <wsdl:input message="tns:seedsmsToAdminHttpPostIn" />
+      <wsdl:output message="tns:seedsmsToAdminHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginHttpPostIn" />
+      <wsdl:output message="tns:loginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Binding">
+      <wsdl:input message="tns:BindingHttpPostIn" />
+      <wsdl:output message="tns:BindingHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <wsdl:input message="tns:GetUserInfoHttpPostIn" />
+      <wsdl:output message="tns:GetUserInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravel">
+      <wsdl:input message="tns:GetTravelHttpPostIn" />
+      <wsdl:output message="tns:GetTravelHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMission">
+      <wsdl:input message="tns:GetMissionHttpPostIn" />
+      <wsdl:output message="tns:GetMissionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="passengerConfirm">
+      <wsdl:input message="tns:passengerConfirmHttpPostIn" />
+      <wsdl:output message="tns:passengerConfirmHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="passengerCancel">
+      <wsdl:input message="tns:passengerCancelHttpPostIn" />
+      <wsdl:output message="tns:passengerCancelHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dirverConfirm">
+      <wsdl:input message="tns:dirverConfirmHttpPostIn" />
+      <wsdl:output message="tns:dirverConfirmHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="driverUpdataGPS">
+      <wsdl:input message="tns:driverUpdataGPSHttpPostIn" />
+      <wsdl:output message="tns:driverUpdataGPSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="driverSubmit">
+      <wsdl:input message="tns:driverSubmitHttpPostIn" />
+      <wsdl:output message="tns:driverSubmitHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="driverConfirmA">
+      <wsdl:input message="tns:driverConfirmAHttpPostIn" />
+      <wsdl:output message="tns:driverConfirmAHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="driverCancel">
+      <wsdl:input message="tns:driverCancelHttpPostIn" />
+      <wsdl:output message="tns:driverCancelHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dirverConfirm2">
+      <wsdl:input message="tns:dirverConfirm2HttpPostIn" />
+      <wsdl:output message="tns:dirverConfirm2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMissionList">
+      <wsdl:input message="tns:GetMissionListHttpPostIn" />
+      <wsdl:output message="tns:GetMissionListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelList">
+      <wsdl:input message="tns:GetTravelListHttpPostIn" />
+      <wsdl:output message="tns:GetTravelListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForecastTime">
+      <wsdl:input message="tns:GetForecastTimeHttpPostIn" />
+      <wsdl:output message="tns:GetForecastTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineTime">
+      <wsdl:input message="tns:GetLineTimeHttpPostIn" />
+      <wsdl:output message="tns:GetLineTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLineTime">
+      <wsdl:input message="tns:GetAllLineTimeHttpPostIn" />
+      <wsdl:output message="tns:GetAllLineTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <wsdl:input message="tns:GetLocationHttpPostIn" />
+      <wsdl:output message="tns:GetLocationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dirverMessage">
+      <wsdl:input message="tns:dirverMessageHttpPostIn" />
+      <wsdl:output message="tns:dirverMessageHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetALLMissionList">
+      <wsdl:input message="tns:GetALLMissionListHttpPostIn" />
+      <wsdl:output message="tns:GetALLMissionListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMissionDetail">
+      <wsdl:input message="tns:GetMissionDetailHttpPostIn" />
+      <wsdl:output message="tns:GetMissionDetailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDriverList">
+      <wsdl:input message="tns:GetAllDriverListHttpPostIn" />
+      <wsdl:output message="tns:GetAllDriverListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCarList">
+      <wsdl:input message="tns:GetAllCarListHttpPostIn" />
+      <wsdl:output message="tns:GetAllCarListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input message="tns:TestHttpPostIn" />
+      <wsdl:output message="tns:TestHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WeChatWSSoap" type="tns:WeChatWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seedsms">
+      <soap:operation soapAction="http://tempuri.org/seedsms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seedsmsToDriver">
+      <soap:operation soapAction="http://tempuri.org/seedsmsToDriver" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seedsmsToAdmin">
+      <soap:operation soapAction="http://tempuri.org/seedsmsToAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Binding">
+      <soap:operation soapAction="http://tempuri.org/Binding" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <soap:operation soapAction="http://tempuri.org/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravel">
+      <soap:operation soapAction="http://tempuri.org/GetTravel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMission">
+      <soap:operation soapAction="http://tempuri.org/GetMission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="passengerConfirm">
+      <soap:operation soapAction="http://tempuri.org/passengerConfirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="passengerCancel">
+      <soap:operation soapAction="http://tempuri.org/passengerCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dirverConfirm">
+      <soap:operation soapAction="http://tempuri.org/dirverConfirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="driverUpdataGPS">
+      <soap:operation soapAction="http://tempuri.org/driverUpdataGPS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="driverSubmit">
+      <soap:operation soapAction="http://tempuri.org/driverSubmit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="driverConfirmA">
+      <soap:operation soapAction="http://tempuri.org/driverConfirmA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="driverCancel">
+      <soap:operation soapAction="http://tempuri.org/driverCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dirverConfirm2">
+      <soap:operation soapAction="http://tempuri.org/dirverConfirm2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMissionList">
+      <soap:operation soapAction="http://tempuri.org/GetMissionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelList">
+      <soap:operation soapAction="http://tempuri.org/GetTravelList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetForecastTime">
+      <soap:operation soapAction="http://tempuri.org/GetForecastTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineTime">
+      <soap:operation soapAction="http://tempuri.org/GetLineTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLineTime">
+      <soap:operation soapAction="http://tempuri.org/GetAllLineTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <soap:operation soapAction="http://tempuri.org/GetLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dirverMessage">
+      <soap:operation soapAction="http://tempuri.org/dirverMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetALLMissionList">
+      <soap:operation soapAction="http://tempuri.org/GetALLMissionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMissionDetail">
+      <soap:operation soapAction="http://tempuri.org/GetMissionDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDriverList">
+      <soap:operation soapAction="http://tempuri.org/GetAllDriverList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCarList">
+      <soap:operation soapAction="http://tempuri.org/GetAllCarList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WeChatWSSoap12" type="tns:WeChatWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seedsms">
+      <soap12:operation soapAction="http://tempuri.org/seedsms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seedsmsToDriver">
+      <soap12:operation soapAction="http://tempuri.org/seedsmsToDriver" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seedsmsToAdmin">
+      <soap12:operation soapAction="http://tempuri.org/seedsmsToAdmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap12:operation soapAction="http://tempuri.org/login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Binding">
+      <soap12:operation soapAction="http://tempuri.org/Binding" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravel">
+      <soap12:operation soapAction="http://tempuri.org/GetTravel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMission">
+      <soap12:operation soapAction="http://tempuri.org/GetMission" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="passengerConfirm">
+      <soap12:operation soapAction="http://tempuri.org/passengerConfirm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="passengerCancel">
+      <soap12:operation soapAction="http://tempuri.org/passengerCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dirverConfirm">
+      <soap12:operation soapAction="http://tempuri.org/dirverConfirm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="driverUpdataGPS">
+      <soap12:operation soapAction="http://tempuri.org/driverUpdataGPS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="driverSubmit">
+      <soap12:operation soapAction="http://tempuri.org/driverSubmit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="driverConfirmA">
+      <soap12:operation soapAction="http://tempuri.org/driverConfirmA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="driverCancel">
+      <soap12:operation soapAction="http://tempuri.org/driverCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dirverConfirm2">
+      <soap12:operation soapAction="http://tempuri.org/dirverConfirm2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMissionList">
+      <soap12:operation soapAction="http://tempuri.org/GetMissionList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelList">
+      <soap12:operation soapAction="http://tempuri.org/GetTravelList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetForecastTime">
+      <soap12:operation soapAction="http://tempuri.org/GetForecastTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLineTime">
+      <soap12:operation soapAction="http://tempuri.org/GetLineTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLineTime">
+      <soap12:operation soapAction="http://tempuri.org/GetAllLineTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <soap12:operation soapAction="http://tempuri.org/GetLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dirverMessage">
+      <soap12:operation soapAction="http://tempuri.org/dirverMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetALLMissionList">
+      <soap12:operation soapAction="http://tempuri.org/GetALLMissionList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMissionDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetMissionDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDriverList">
+      <soap12:operation soapAction="http://tempuri.org/GetAllDriverList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCarList">
+      <soap12:operation soapAction="http://tempuri.org/GetAllCarList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap12:operation soapAction="http://tempuri.org/Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WeChatWSHttpGet" type="tns:WeChatWSHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seedsms">
+      <http:operation location="/seedsms" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="seedsmsToDriver">
+      <http:operation location="/seedsmsToDriver" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="seedsmsToAdmin">
+      <http:operation location="/seedsmsToAdmin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <http:operation location="/login" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Binding">
+      <http:operation location="/Binding" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <http:operation location="/GetUserInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravel">
+      <http:operation location="/GetTravel" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetMission">
+      <http:operation location="/GetMission" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="passengerConfirm">
+      <http:operation location="/passengerConfirm" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="passengerCancel">
+      <http:operation location="/passengerCancel" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="dirverConfirm">
+      <http:operation location="/dirverConfirm" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="driverUpdataGPS">
+      <http:operation location="/driverUpdataGPS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="driverSubmit">
+      <http:operation location="/driverSubmit" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="driverConfirmA">
+      <http:operation location="/driverConfirmA" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="driverCancel">
+      <http:operation location="/driverCancel" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="dirverConfirm2">
+      <http:operation location="/dirverConfirm2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetMissionList">
+      <http:operation location="/GetMissionList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelList">
+      <http:operation location="/GetTravelList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetForecastTime">
+      <http:operation location="/GetForecastTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineTime">
+      <http:operation location="/GetLineTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLineTime">
+      <http:operation location="/GetAllLineTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <http:operation location="/GetLocation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="dirverMessage">
+      <http:operation location="/dirverMessage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetALLMissionList">
+      <http:operation location="/GetALLMissionList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetMissionDetail">
+      <http:operation location="/GetMissionDetail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDriverList">
+      <http:operation location="/GetAllDriverList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCarList">
+      <http:operation location="/GetAllCarList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <http:operation location="/Test" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WeChatWSHttpPost" type="tns:WeChatWSHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seedsms">
+      <http:operation location="/seedsms" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="seedsmsToDriver">
+      <http:operation location="/seedsmsToDriver" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="seedsmsToAdmin">
+      <http:operation location="/seedsmsToAdmin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <http:operation location="/login" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Binding">
+      <http:operation location="/Binding" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfo">
+      <http:operation location="/GetUserInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravel">
+      <http:operation location="/GetTravel" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetMission">
+      <http:operation location="/GetMission" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="passengerConfirm">
+      <http:operation location="/passengerConfirm" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="passengerCancel">
+      <http:operation location="/passengerCancel" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="dirverConfirm">
+      <http:operation location="/dirverConfirm" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="driverUpdataGPS">
+      <http:operation location="/driverUpdataGPS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="driverSubmit">
+      <http:operation location="/driverSubmit" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="driverConfirmA">
+      <http:operation location="/driverConfirmA" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="driverCancel">
+      <http:operation location="/driverCancel" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="dirverConfirm2">
+      <http:operation location="/dirverConfirm2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetMissionList">
+      <http:operation location="/GetMissionList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetTravelList">
+      <http:operation location="/GetTravelList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetForecastTime">
+      <http:operation location="/GetForecastTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetLineTime">
+      <http:operation location="/GetLineTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLineTime">
+      <http:operation location="/GetAllLineTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <http:operation location="/GetLocation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="dirverMessage">
+      <http:operation location="/dirverMessage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetALLMissionList">
+      <http:operation location="/GetALLMissionList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetMissionDetail">
+      <http:operation location="/GetMissionDetail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDriverList">
+      <http:operation location="/GetAllDriverList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCarList">
+      <http:operation location="/GetAllCarList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <http:operation location="/Test" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WeChatWS">
+    <wsdl:port name="WeChatWSSoap" binding="tns:WeChatWSSoap">
+      <soap:address location="https://web1.seeds-garment.com.cn/WeChatWS3.5/WeChatWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WeChatWSSoap12" binding="tns:WeChatWSSoap12">
+      <soap12:address location="https://web1.seeds-garment.com.cn/WeChatWS3.5/WeChatWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WeChatWSHttpGet" binding="tns:WeChatWSHttpGet">
+      <http:address location="https://web1.seeds-garment.com.cn/WeChatWS3.5/WeChatWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WeChatWSHttpPost" binding="tns:WeChatWSHttpPost">
+      <http:address location="https://web1.seeds-garment.com.cn/WeChatWS3.5/WeChatWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

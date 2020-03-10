@@ -1,0 +1,10 @@
+D:\Shares\CDWebSer\bin\WeChatWS.dll
+D:\Shares\CDWebSer\bin\WeChatWS.pdb
+D:\Shares\CDWebSer\obj\Debug\ResolveAssemblyReference.cache
+D:\Shares\CDWebSer\obj\Debug\WeChatWS.dll
+D:\Shares\CDWebSer\obj\Debug\WeChatWS.pdb
+C:\Users\denglingxiao\Desktop\WeChatWS_180828\WeChatWS\bin\WeChatWS.dll
+C:\Users\denglingxiao\Desktop\WeChatWS_180828\WeChatWS\bin\WeChatWS.pdb
+C:\Users\denglingxiao\Desktop\WeChatWS_180828\WeChatWS\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\denglingxiao\Desktop\WeChatWS_180828\WeChatWS\obj\Debug\WeChatWS.dll
+C:\Users\denglingxiao\Desktop\WeChatWS_180828\WeChatWS\obj\Debug\WeChatWS.pdb

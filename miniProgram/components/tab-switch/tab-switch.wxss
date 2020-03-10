@@ -1,0 +1,64 @@
+.plus {
+  padding: 0;
+}
+
+.plus-title {
+  white-space: nowrap;
+  text-align: center;
+  background: #fff;
+}
+
+.plus-title view {
+  width: auto;
+  padding: 0 24rpx;
+  margin: 0 16rpx;
+  line-height: 84rpx;
+  display: inline-block;
+  text-align: center;
+  border-bottom: 4rpx solid #fff;
+  font-size: 30rpx;
+}
+
+.plus-title view:first-child {
+  margin-left: 0;
+}
+
+.plus-title view:last-child {
+  margin-right: 0;
+}
+
+/* 修改激活样式 */
+.plus-current {
+  border-bottom: 4rpx solid #00B26A !important;
+  color: #00B26A;
+}
+
+.plus-swiper {
+  width: 100%;
+  height: 350rpx;
+  padding: 0;
+}
+
+.plus-swiper swiper-item {
+  width: 100%;
+}
+
+.plus-swiper swiper-item navigator {
+  line-height: 70rpx;
+  width: 100%;
+  display: block;
+}
+
+.plus-swiper-full {
+  width: 100%;
+  height: auto;
+}
+
+.plus-swiper-full swiper-item {
+  width: 100%;
+}
+
+.plus-swiper-full scroll-view {
+  width: 100%;
+  height: 100%;
+}

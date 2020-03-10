@@ -1,0 +1,127 @@
+.car{
+    position: relative;
+    margin: auto;
+}
+.car .car_body{
+    position: absolute;
+}
+.car .car_top1,.car .car_top2{
+    border-top: 1px solid rgb(186,188,187);   
+    width:37rpx;
+    height: 14rpx;
+    /* background: rgb(246,126,40); */
+    position: absolute;
+    left:0;
+    top:-22rpx;
+}
+.car .car_top1{
+    border-left: 1px solid rgb(186,188,187);
+    left:-26rpx;
+    top:-22rpx;
+    -webkit-transform:skew(-45deg);
+    -moz-transform:skew(-45deg);
+    -o-transform:skew(-45deg);
+    -ms-transform:skew(-45deg);
+    transform:skew(-45deg);
+}
+.car .car_top2{
+    border-right: 1px solid rgb(186,188,187);
+    left:0;
+    width:40rpx;
+    top:-22rpx;
+    border-top-left-radius:0;
+    border-top-right-radius:2rpx;
+}
+.car .car_win1,.car .car_win2,.car .car_win3{
+    width:16rpx;
+    height:16rpx;
+    background: rgb(149, 114, 103);
+    border-top-left-radius:10rpx;
+    position: absolute;
+    left:0rpx;
+    top:-17rpx;
+    z-index: 666;
+}
+.car .car_win1{
+    left:-19rpx;
+    -webkit-transform:rotate(0deg) skew(-10deg);
+    -moz-transform:rotate(0deg) skew(-10deg);
+    -o-transform:rotate(0deg) skew(-10deg);
+    -ms-transform:rotate(0deg) skew(-10deg);
+    transform:rotate(0deg) skew(-10deg);
+}
+.car .car_win2{
+    border-top-left-radius:0rpx;
+}
+.car .car_win3{
+    left:20rpx;
+    border-top-left-radius:0rpx;
+}
+.car .car_bottom1,.car .car_bottom2{
+    width:40rpx;
+    height:16rpx;
+    /* background: rgb(246,126,40); */
+    border-bottom-left-radius: 3rpx;
+    border-bottom:8rpx solid rgb(186,188,187);
+    position: absolute;
+    top:-6rpx;
+    left:-35rpx;
+
+}
+.car .car_bottom1:after{
+    content: '';
+    display: inline-block;
+    background: rgb(247,244,111);
+    width:5rpx;
+    height: 8rpx;
+    border-radius: 6rpx/8rpx;
+    position: absolute;
+    top:5.5rpx;
+    left:3rpx;
+    /* border: 1px solid rgb(186,188,187); */
+    
+}
+.car .car_bottom1{
+    
+    border-left: 1px solid rgb(186,188,187);
+        -webkit-transform:skew(-4deg);
+    -moz-transform:skew(-4deg);
+    -o-transform:skew(-4deg);
+    -ms-transform:skew(-4deg);
+    transform:skew(-4deg);
+
+}
+.car .car_bottom2{
+    border-right: 1px solid rgb(186,188,187);
+    height: 16.5rpx;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    left:0rpx;
+    top:-6rpx;
+}
+.car .frontWheel,.car .endWheel{
+    width:16rpx;
+    height:16rpx;
+    border-radius: 50%;
+    background:#333;
+    position: absolute;
+    top:10rpx;
+    left:-25rpx;
+}
+.car .endWheel{
+    left:16rpx;
+}
+.car .frontWheel:after,.car .endWheel:after{
+    content: '';
+    display: inline-block;
+    width:7rpx;
+    height: 7rpx;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top: -3.5rpx;
+    margin-left: -3.5rpx;
+}

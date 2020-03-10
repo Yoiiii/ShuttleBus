@@ -1,0 +1,186 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"nodeModules": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.3",
+	"appid": "wxa0c71ba9986f5816",
+	"projectname": "%E7%A9%BF%E6%A2%AD%E8%BB%8A%E7%B3%BB%E7%B5%B1",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 17,
+			"list": [
+				{
+					"id": 0,
+					"name": "乘客扫描二维码上车",
+					"pathName": "pages/start/start",
+					"query": "carID=粵S2437B",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "travelList",
+					"pathName": "pages/travelList/travelList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "travelInfo",
+					"pathName": "pages/travelInfo/travelInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "map",
+					"pathName": "pages/map/map",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "missionList",
+					"pathName": "pages/missionList/missionList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "missionInfo",
+					"pathName": "pages/missionInfo/missionInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "homePage",
+					"pathName": "pages/homePage/homePage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "passenger",
+					"pathName": "pages/passenger/passenger",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "passengerList",
+					"pathName": "pages/passengerList/passengerList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/start/start",
+					"pathName": "pages/start/start",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/binding/binding",
+					"pathName": "pages/binding/binding",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/gpsBackground/gpsBackground",
+					"pathName": "pages/gpsBackground/gpsBackground",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/list/list",
+					"pathName": "pages/list/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/remind/remind",
+					"pathName": "pages/remind/remind",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/setting/setting",
+					"pathName": "pages/setting/setting",
+					"query": "carID=粵S2437B",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mission/mission",
+					"pathName": "pages/mission/mission",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/test/test",
+					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/car/car",
+					"pathName": "pages/car/car",
+					"scene": null
+				}
+			]
+		}
+	}
+}

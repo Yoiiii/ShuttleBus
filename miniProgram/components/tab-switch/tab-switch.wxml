@@ -1,0 +1,6 @@
+<view>
+  <scroll-view class="plus-title" scroll-x="true">
+    <view wx:for="{{tabTitle}}" wx:key="id" data-index="{{index}}" class="{{curIndex == index ? 'plus-current' : ''}}" bindtap="tabChange">{{item[tabName]}}</view>
+  </scroll-view>
+  <slot></slot>
+</view>

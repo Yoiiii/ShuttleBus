@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SSM2_PRODModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="SSM2_PRODModelStoreContainer">
+          <EntitySet Name="M_Company" EntityType="SSM2_PRODModel.Store.M_Company" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="M_Role" EntityType="SSM2_PRODModel.Store.M_Role" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="M_System" EntityType="SSM2_PRODModel.Store.M_System" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="M_SystemFunc" EntityType="SSM2_PRODModel.Store.M_SystemFunc" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="M_SystemFuncAccessRights" EntityType="SSM2_PRODModel.Store.M_SystemFuncAccessRights" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="M_SystemFuncAccessRights_Wechat" EntityType="SSM2_PRODModel.Store.M_SystemFuncAccessRights_Wechat" store:Type="Tables" store:Schema="dbo" store:Name="M_SystemFuncAccessRights_Wechat">
+            <DefiningQuery>SELECT 
+      [M_SystemFuncAccessRights_Wechat].[Cancelled] AS [Cancelled], 
+      [M_SystemFuncAccessRights_Wechat].[CompCode] AS [CompCode], 
+      [M_SystemFuncAccessRights_Wechat].[FuncCode] AS [FuncCode], 
+      [M_SystemFuncAccessRights_Wechat].[FuncName] AS [FuncName], 
+      [M_SystemFuncAccessRights_Wechat].[HrefUrl] AS [HrefUrl], 
+      [M_SystemFuncAccessRights_Wechat].[IconUrl] AS [IconUrl], 
+      [M_SystemFuncAccessRights_Wechat].[RoleID] AS [RoleID]
+      FROM [dbo].[M_SystemFuncAccessRights_Wechat] AS [M_SystemFuncAccessRights_Wechat]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="M_SystemFuncConn" EntityType="SSM2_PRODModel.Store.M_SystemFuncConn" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="M_SystemFuncPath" EntityType="SSM2_PRODModel.Store.M_SystemFuncPath" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="M_User" EntityType="SSM2_PRODModel.Store.M_User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="M_UserRole" EntityType="SSM2_PRODModel.Store.M_UserRole" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="M_Company">
+          <Key>
+            <PropertyRef Name="CompCode" />
+          </Key>
+          <Property Name="Address" Type="nvarchar" Nullable="false" MaxLength="300" />
+          <Property Name="CompCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CompName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreateUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="LastUpdDate" Type="datetime" />
+          <Property Name="LastUpdUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="LauncherIconPath" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="LauncherURL" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="LogoPath" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="ReadOnly" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="SeqNo" Type="int" Nullable="false" />
+          <Property Name="SiteCode" Type="varchar" MaxLength="3" />
+          <Property Name="SuspendDate" Type="datetime" />
+          <Property Name="Suspended" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="SuspendUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="TagID" Type="varchar" Nullable="false" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="M_Role">
+          <Key>
+            <PropertyRef Name="CompCode" />
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="CancelDate" Type="datetime" />
+          <Property Name="Cancelled" Type="char" MaxLength="1" />
+          <Property Name="CancelUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="CompCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreateUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="LastUpdDate" Type="datetime" />
+          <Property Name="LastUpdUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="RoleID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="RoleName" Type="varchar" MaxLength="50" />
+          <Property Name="Suspended" Type="char" MaxLength="1" />
+          <Property Name="ValidFrom" Type="datetime" />
+          <Property Name="ValidTo" Type="datetime" />
+        </EntityType>
+        <EntityType Name="M_System">
+          <Key>
+            <PropertyRef Name="SystemCode" />
+          </Key>
+          <Property Name="ActionName1" Type="varchar" MaxLength="20" />
+          <Property Name="ActionName10" Type="varchar" MaxLength="20" />
+          <Property Name="ActionName11" Type="varchar" MaxLength="20" />
+          <Property Name="ActionName12" Type="varchar" MaxLength="20" />
+          <Property Name="ActionName13" Type="varchar" MaxLength="20" />
+          <Property Name="ActionName14" Type="varchar" MaxLength="20" />
+          <Property Name="ActionName15" Type="varchar" MaxLength="20" />
+          <Property Name="ActionName2" Type="varchar" MaxLength="20" />
+          <Property Name="ActionName3" Type="varchar" MaxLength="20" />
+          <Property Name="ActionName4" Type="varchar" MaxLength="20" />
+          <Property Name="ActionName5" Type="varchar" MaxLength="20" />
+          <Property Name="ActionName6" Type="varchar" MaxLength="20" />
+          <Property Name="ActionName7" Type="varchar" MaxLength="20" />
+          <Property Name="ActionName8" Type="varchar" MaxLength="20" />
+          <Property Name="ActionName9" Type="varchar" MaxLength="20" />
+          <Property Name="CancelDate" Type="datetime" />
+          <Property Name="Cancelled" Type="char" MaxLength="1" />
+          <Property Name="CancelUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreateUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="LastUpdDate" Type="datetime" />
+          <Property Name="LastUpdUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="LaunchDate" Type="datetime" />
+          <Property Name="MenuDispSeq" Type="int" />
+          <Property Name="Platform" Type="varchar" MaxLength="10" />
+          <Property Name="Suspended" Type="char" MaxLength="1" />
+          <Property Name="SystemCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SystemContact" Type="varchar" MaxLength="50" />
+          <Property Name="SystemIntroURL" Type="varchar" MaxLength="200" />
+          <Property Name="SystemName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SystemResponsible" Type="varchar" MaxLength="50" />
+          <Property Name="SystemTagID" Type="varchar" MaxLength="12" />
+          <Property Name="SystemTipTagID" Type="varchar" MaxLength="12" />
+          <Property Name="ValidFrom" Type="datetime" />
+          <Property Name="ValidTo" Type="datetime" />
+        </EntityType>
+        <EntityType Name="M_SystemFunc">
+          <Key>
+            <PropertyRef Name="FuncCode" />
+            <PropertyRef Name="SystemCode" />
+          </Key>
+          <Property Name="CancelDate" Type="datetime" />
+          <Property Name="Cancelled" Type="char" MaxLength="1" />
+          <Property Name="CancelUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreateUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="FuncCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FuncName" Type="varchar" MaxLength="50" />
+          <Property Name="FuncTagID" Type="varchar" MaxLength="12" />
+          <Property Name="FuncTipsTagID" Type="varchar" MaxLength="12" />
+          <Property Name="LastUpdDate" Type="datetime" />
+          <Property Name="LastUpdUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="LaunchMethod" Type="char" MaxLength="1" />
+          <Property Name="LaunchPara" Type="varchar" MaxLength="500" />
+          <Property Name="PathID" Type="varchar" MaxLength="20" />
+          <Property Name="Platform" Type="varchar" MaxLength="10" />
+          <Property Name="Suspended" Type="char" MaxLength="1" />
+          <Property Name="SystemCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ValidFrom" Type="datetime" />
+          <Property Name="ValidTo" Type="datetime" />
+        </EntityType>
+        <EntityType Name="M_SystemFuncAccessRights">
+          <Key>
+            <PropertyRef Name="CompCode" />
+            <PropertyRef Name="FuncCode" />
+            <PropertyRef Name="RoleID" />
+            <PropertyRef Name="SystemCode" />
+          </Key>
+          <Property Name="ActionValue1" Type="varchar" MaxLength="10" />
+          <Property Name="ActionValue10" Type="varchar" MaxLength="10" />
+          <Property Name="ActionValue11" Type="varchar" MaxLength="10" />
+          <Property Name="ActionValue12" Type="varchar" MaxLength="10" />
+          <Property Name="ActionValue13" Type="varchar" MaxLength="10" />
+          <Property Name="ActionValue14" Type="varchar" MaxLength="10" />
+          <Property Name="ActionValue15" Type="varchar" MaxLength="10" />
+          <Property Name="ActionValue2" Type="varchar" MaxLength="10" />
+          <Property Name="ActionValue3" Type="varchar" MaxLength="10" />
+          <Property Name="ActionValue4" Type="varchar" MaxLength="10" />
+          <Property Name="ActionValue5" Type="varchar" MaxLength="10" />
+          <Property Name="ActionValue6" Type="varchar" MaxLength="10" />
+          <Property Name="ActionValue7" Type="varchar" MaxLength="10" />
+          <Property Name="ActionValue8" Type="varchar" MaxLength="10" />
+          <Property Name="ActionValue9" Type="varchar" MaxLength="10" />
+          <Property Name="AdditionalAttr" Type="varchar" MaxLength="300" />
+          <Property Name="CompCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FuncCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="RoleID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SystemCode" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'SSM2_PROD.dbo.M_SystemFuncAccessRights_Wechat' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="M_SystemFuncAccessRights_Wechat">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="Cancelled" Type="varchar" MaxLength="2" />
+          <Property Name="CompCode" Type="varchar" MaxLength="50" />
+          <Property Name="FuncCode" Type="varchar" MaxLength="30" />
+          <Property Name="FuncName" Type="varchar" MaxLength="50" />
+          <Property Name="HrefUrl" Type="varchar" MaxLength="100" />
+          <Property Name="IconUrl" Type="varchar" MaxLength="100" />
+          <Property Name="RoleID" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="M_SystemFuncConn">
+          <Key>
+            <PropertyRef Name="CompCode" />
+            <PropertyRef Name="ConnName" />
+            <PropertyRef Name="FuncCode" />
+            <PropertyRef Name="SystemCode" />
+          </Key>
+          <Property Name="CompCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ConnID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ConnName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FuncCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SystemCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="TestConn" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="M_SystemFuncPath">
+          <Key>
+            <PropertyRef Name="CompCode" />
+            <PropertyRef Name="FuncCode" />
+            <PropertyRef Name="PathName" />
+            <PropertyRef Name="SystemCode" />
+          </Key>
+          <Property Name="CheckExist" Type="char" MaxLength="1" />
+          <Property Name="CheckRead" Type="char" MaxLength="1" />
+          <Property Name="CheckWrite" Type="char" MaxLength="1" />
+          <Property Name="CompCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FuncCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="PathID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="PathName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SystemCode" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="M_User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="AlertMethod" Type="varchar" MaxLength="10" />
+          <Property Name="CancelDate" Type="datetime" />
+          <Property Name="Cancelled" Type="char" MaxLength="1" />
+          <Property Name="CancelUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="CompCode" Type="varchar" MaxLength="20" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreateUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="DeptCode" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="EmployeeNo" Type="varchar" MaxLength="10" />
+          <Property Name="ExternalUser" Type="char" MaxLength="1" />
+          <Property Name="ExtNo" Type="varchar" MaxLength="10" />
+          <Property Name="GroupCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="LangCode" Type="varchar" MaxLength="6" />
+          <Property Name="LastUpdDate" Type="datetime" />
+          <Property Name="LastUpdUser" Type="nvarchar" MaxLength="20" />
+          <Property Name="LoginPlatform" Type="varchar" MaxLength="10" />
+          <Property Name="MSNID" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="varchar" MaxLength="30" />
+          <Property Name="Position" Type="varchar" MaxLength="50" />
+          <Property Name="ReqChgPwd" Type="char" MaxLength="1" />
+          <Property Name="SiteCode" Type="varchar" MaxLength="20" />
+          <Property Name="Suspended" Type="char" MaxLength="1" />
+          <Property Name="UserAttr1" Type="varchar" MaxLength="20" />
+          <Property Name="UserAttr2" Type="varchar" MaxLength="20" />
+          <Property Name="UserAttr3" Type="varchar" MaxLength="20" />
+          <Property Name="UserAttr4" Type="varchar" MaxLength="20" />
+          <Property Name="UserAttr5" Type="varchar" MaxLength="20" />
+          <Property Name="UserCat1" Type="varchar" MaxLength="20" />
+          <Property Name="UserCat2" Type="varchar" MaxLength="20" />
+          <Property Name="UserCat3" Type="varchar" MaxLength="20" />
+          <Property Name="UserID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="UserIDKey" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ValidFrom" Type="datetime" />
+          <Property Name="ValidTo" Type="datetime" />
+        </EntityType>
+        <EntityType Name="M_UserRole">
+          <Key>
+            <PropertyRef Name="CompCode" />
+            <PropertyRef Name="RoleID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="CompCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="RoleID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="UserID" Type="nvarchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SSM2_PRODModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="SSM2_PRODEntities">
+          <EntitySet Name="M_Company" EntityType="SSM2_PRODModel.M_Company" />
+          <EntitySet Name="M_Role" EntityType="SSM2_PRODModel.M_Role" />
+          <EntitySet Name="M_System" EntityType="SSM2_PRODModel.M_System" />
+          <EntitySet Name="M_SystemFunc" EntityType="SSM2_PRODModel.M_SystemFunc" />
+          <EntitySet Name="M_SystemFuncAccessRights" EntityType="SSM2_PRODModel.M_SystemFuncAccessRights" />
+          <EntitySet Name="M_SystemFuncAccessRights_Wechat" EntityType="SSM2_PRODModel.M_SystemFuncAccessRights_Wechat" />
+          <EntitySet Name="M_SystemFuncConn" EntityType="SSM2_PRODModel.M_SystemFuncConn" />
+          <EntitySet Name="M_SystemFuncPath" EntityType="SSM2_PRODModel.M_SystemFuncPath" />
+          <EntitySet Name="M_User" EntityType="SSM2_PRODModel.M_User" />
+          <EntitySet Name="M_UserRole" EntityType="SSM2_PRODModel.M_UserRole" />
+        </EntityContainer>
+        <EntityType Name="M_Company">
+          <Key>
+            <PropertyRef Name="CompCode" />
+          </Key>
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="CompCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CompName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="CreateUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LastUpdDate" Type="DateTime" />
+          <Property Name="LastUpdUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LauncherIconPath" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="LauncherURL" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="LogoPath" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="ReadOnly" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="SeqNo" Type="Int32" Nullable="false" />
+          <Property Name="SiteCode" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="SuspendDate" Type="DateTime" />
+          <Property Name="Suspended" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="SuspendUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="TagID" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="M_Role">
+          <Key>
+            <PropertyRef Name="CompCode" />
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="CancelDate" Type="DateTime" />
+          <Property Name="Cancelled" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CancelUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CompCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="CreateUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LastUpdDate" Type="DateTime" />
+          <Property Name="LastUpdUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="RoleID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="RoleName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Suspended" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="ValidFrom" Type="DateTime" />
+          <Property Name="ValidTo" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="M_System">
+          <Key>
+            <PropertyRef Name="SystemCode" />
+          </Key>
+          <Property Name="ActionName1" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ActionName10" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ActionName11" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ActionName12" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ActionName13" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ActionName14" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ActionName15" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ActionName2" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ActionName3" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ActionName4" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ActionName5" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ActionName6" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ActionName7" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ActionName8" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ActionName9" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CancelDate" Type="DateTime" />
+          <Property Name="Cancelled" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CancelUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="CreateUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LastUpdDate" Type="DateTime" />
+          <Property Name="LastUpdUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LaunchDate" Type="DateTime" />
+          <Property Name="MenuDispSeq" Type="Int32" />
+          <Property Name="Platform" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Suspended" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="SystemCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SystemContact" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SystemIntroURL" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="SystemName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SystemResponsible" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SystemTagID" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="SystemTipTagID" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="ValidFrom" Type="DateTime" />
+          <Property Name="ValidTo" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="M_SystemFunc">
+          <Key>
+            <PropertyRef Name="FuncCode" />
+            <PropertyRef Name="SystemCode" />
+          </Key>
+          <Property Name="CancelDate" Type="DateTime" />
+          <Property Name="Cancelled" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CancelUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="CreateUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="FuncCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="FuncName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FuncTagID" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="FuncTipsTagID" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="LastUpdDate" Type="DateTime" />
+          <Property Name="LastUpdUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LaunchMethod" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="LaunchPara" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="PathID" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Platform" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Suspended" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="SystemCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ValidFrom" Type="DateTime" />
+          <Property Name="ValidTo" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="M_SystemFuncAccessRights">
+          <Key>
+            <PropertyRef Name="CompCode" />
+            <PropertyRef Name="FuncCode" />
+            <PropertyRef Name="RoleID" />
+            <PropertyRef Name="SystemCode" />
+          </Key>
+          <Property Name="ActionValue1" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActionValue10" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActionValue11" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActionValue12" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActionValue13" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActionValue14" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActionValue15" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActionValue2" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActionValue3" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActionValue4" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActionValue5" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActionValue6" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActionValue7" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActionValue8" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ActionValue9" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="AdditionalAttr" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="CompCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="FuncCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="RoleID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SystemCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="M_SystemFuncAccessRights_Wechat">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="Cancelled" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="CompCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FuncCode" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="FuncName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HrefUrl" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IconUrl" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="RoleID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="M_SystemFuncConn">
+          <Key>
+            <PropertyRef Name="CompCode" />
+            <PropertyRef Name="ConnName" />
+            <PropertyRef Name="FuncCode" />
+            <PropertyRef Name="SystemCode" />
+          </Key>
+          <Property Name="CompCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ConnID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ConnName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="FuncCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SystemCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="TestConn" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="M_SystemFuncPath">
+          <Key>
+            <PropertyRef Name="CompCode" />
+            <PropertyRef Name="FuncCode" />
+            <PropertyRef Name="PathName" />
+            <PropertyRef Name="SystemCode" />
+          </Key>
+          <Property Name="CheckExist" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CheckRead" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CheckWrite" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CompCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="FuncCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PathID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PathName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SystemCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="M_User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="AlertMethod" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="CancelDate" Type="DateTime" />
+          <Property Name="Cancelled" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CancelUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="CompCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="CreateUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="DeptCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="EmployeeNo" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ExternalUser" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="ExtNo" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="GroupCode" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LangCode" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="LastUpdDate" Type="DateTime" />
+          <Property Name="LastUpdUser" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="LoginPlatform" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="MSNID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Position" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ReqChgPwd" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="SiteCode" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Suspended" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="UserAttr1" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UserAttr2" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UserAttr3" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UserAttr4" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UserAttr5" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UserCat1" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UserCat2" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UserCat3" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UserID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="UserIDKey" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ValidFrom" Type="DateTime" />
+          <Property Name="ValidTo" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="M_UserRole">
+          <Key>
+            <PropertyRef Name="CompCode" />
+            <PropertyRef Name="RoleID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="CompCode" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="RoleID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="UserID" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="SSM2_PRODModelStoreContainer" CdmEntityContainer="SSM2_PRODEntities">
+          <EntitySetMapping Name="M_Company">
+            <EntityTypeMapping TypeName="IsTypeOf(SSM2_PRODModel.M_Company)">
+              <MappingFragment StoreEntitySet="M_Company">
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+                <ScalarProperty Name="CompName" ColumnName="CompName" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="LastUpdDate" ColumnName="LastUpdDate" />
+                <ScalarProperty Name="LastUpdUser" ColumnName="LastUpdUser" />
+                <ScalarProperty Name="LauncherIconPath" ColumnName="LauncherIconPath" />
+                <ScalarProperty Name="LauncherURL" ColumnName="LauncherURL" />
+                <ScalarProperty Name="LogoPath" ColumnName="LogoPath" />
+                <ScalarProperty Name="ReadOnly" ColumnName="ReadOnly" />
+                <ScalarProperty Name="SeqNo" ColumnName="SeqNo" />
+                <ScalarProperty Name="SiteCode" ColumnName="SiteCode" />
+                <ScalarProperty Name="SuspendDate" ColumnName="SuspendDate" />
+                <ScalarProperty Name="Suspended" ColumnName="Suspended" />
+                <ScalarProperty Name="SuspendUser" ColumnName="SuspendUser" />
+                <ScalarProperty Name="TagID" ColumnName="TagID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_Role">
+            <EntityTypeMapping TypeName="IsTypeOf(SSM2_PRODModel.M_Role)">
+              <MappingFragment StoreEntitySet="M_Role">
+                <ScalarProperty Name="CancelDate" ColumnName="CancelDate" />
+                <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+                <ScalarProperty Name="CancelUser" ColumnName="CancelUser" />
+                <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="LastUpdDate" ColumnName="LastUpdDate" />
+                <ScalarProperty Name="LastUpdUser" ColumnName="LastUpdUser" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="Suspended" ColumnName="Suspended" />
+                <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+                <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_System">
+            <EntityTypeMapping TypeName="IsTypeOf(SSM2_PRODModel.M_System)">
+              <MappingFragment StoreEntitySet="M_System">
+                <ScalarProperty Name="ActionName1" ColumnName="ActionName1" />
+                <ScalarProperty Name="ActionName10" ColumnName="ActionName10" />
+                <ScalarProperty Name="ActionName11" ColumnName="ActionName11" />
+                <ScalarProperty Name="ActionName12" ColumnName="ActionName12" />
+                <ScalarProperty Name="ActionName13" ColumnName="ActionName13" />
+                <ScalarProperty Name="ActionName14" ColumnName="ActionName14" />
+                <ScalarProperty Name="ActionName15" ColumnName="ActionName15" />
+                <ScalarProperty Name="ActionName2" ColumnName="ActionName2" />
+                <ScalarProperty Name="ActionName3" ColumnName="ActionName3" />
+                <ScalarProperty Name="ActionName4" ColumnName="ActionName4" />
+                <ScalarProperty Name="ActionName5" ColumnName="ActionName5" />
+                <ScalarProperty Name="ActionName6" ColumnName="ActionName6" />
+                <ScalarProperty Name="ActionName7" ColumnName="ActionName7" />
+                <ScalarProperty Name="ActionName8" ColumnName="ActionName8" />
+                <ScalarProperty Name="ActionName9" ColumnName="ActionName9" />
+                <ScalarProperty Name="CancelDate" ColumnName="CancelDate" />
+                <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+                <ScalarProperty Name="CancelUser" ColumnName="CancelUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="LastUpdDate" ColumnName="LastUpdDate" />
+                <ScalarProperty Name="LastUpdUser" ColumnName="LastUpdUser" />
+                <ScalarProperty Name="LaunchDate" ColumnName="LaunchDate" />
+                <ScalarProperty Name="MenuDispSeq" ColumnName="MenuDispSeq" />
+                <ScalarProperty Name="Platform" ColumnName="Platform" />
+                <ScalarProperty Name="Suspended" ColumnName="Suspended" />
+                <ScalarProperty Name="SystemCode" ColumnName="SystemCode" />
+                <ScalarProperty Name="SystemContact" ColumnName="SystemContact" />
+                <ScalarProperty Name="SystemIntroURL" ColumnName="SystemIntroURL" />
+                <ScalarProperty Name="SystemName" ColumnName="SystemName" />
+                <ScalarProperty Name="SystemResponsible" ColumnName="SystemResponsible" />
+                <ScalarProperty Name="SystemTagID" ColumnName="SystemTagID" />
+                <ScalarProperty Name="SystemTipTagID" ColumnName="SystemTipTagID" />
+                <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+                <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_SystemFunc">
+            <EntityTypeMapping TypeName="IsTypeOf(SSM2_PRODModel.M_SystemFunc)">
+              <MappingFragment StoreEntitySet="M_SystemFunc">
+                <ScalarProperty Name="CancelDate" ColumnName="CancelDate" />
+                <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+                <ScalarProperty Name="CancelUser" ColumnName="CancelUser" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="FuncCode" ColumnName="FuncCode" />
+                <ScalarProperty Name="FuncName" ColumnName="FuncName" />
+                <ScalarProperty Name="FuncTagID" ColumnName="FuncTagID" />
+                <ScalarProperty Name="FuncTipsTagID" ColumnName="FuncTipsTagID" />
+                <ScalarProperty Name="LastUpdDate" ColumnName="LastUpdDate" />
+                <ScalarProperty Name="LastUpdUser" ColumnName="LastUpdUser" />
+                <ScalarProperty Name="LaunchMethod" ColumnName="LaunchMethod" />
+                <ScalarProperty Name="LaunchPara" ColumnName="LaunchPara" />
+                <ScalarProperty Name="PathID" ColumnName="PathID" />
+                <ScalarProperty Name="Platform" ColumnName="Platform" />
+                <ScalarProperty Name="Suspended" ColumnName="Suspended" />
+                <ScalarProperty Name="SystemCode" ColumnName="SystemCode" />
+                <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+                <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_SystemFuncAccessRights">
+            <EntityTypeMapping TypeName="IsTypeOf(SSM2_PRODModel.M_SystemFuncAccessRights)">
+              <MappingFragment StoreEntitySet="M_SystemFuncAccessRights">
+                <ScalarProperty Name="ActionValue1" ColumnName="ActionValue1" />
+                <ScalarProperty Name="ActionValue10" ColumnName="ActionValue10" />
+                <ScalarProperty Name="ActionValue11" ColumnName="ActionValue11" />
+                <ScalarProperty Name="ActionValue12" ColumnName="ActionValue12" />
+                <ScalarProperty Name="ActionValue13" ColumnName="ActionValue13" />
+                <ScalarProperty Name="ActionValue14" ColumnName="ActionValue14" />
+                <ScalarProperty Name="ActionValue15" ColumnName="ActionValue15" />
+                <ScalarProperty Name="ActionValue2" ColumnName="ActionValue2" />
+                <ScalarProperty Name="ActionValue3" ColumnName="ActionValue3" />
+                <ScalarProperty Name="ActionValue4" ColumnName="ActionValue4" />
+                <ScalarProperty Name="ActionValue5" ColumnName="ActionValue5" />
+                <ScalarProperty Name="ActionValue6" ColumnName="ActionValue6" />
+                <ScalarProperty Name="ActionValue7" ColumnName="ActionValue7" />
+                <ScalarProperty Name="ActionValue8" ColumnName="ActionValue8" />
+                <ScalarProperty Name="ActionValue9" ColumnName="ActionValue9" />
+                <ScalarProperty Name="AdditionalAttr" ColumnName="AdditionalAttr" />
+                <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+                <ScalarProperty Name="FuncCode" ColumnName="FuncCode" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="SystemCode" ColumnName="SystemCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_SystemFuncAccessRights_Wechat">
+            <EntityTypeMapping TypeName="IsTypeOf(SSM2_PRODModel.M_SystemFuncAccessRights_Wechat)">
+              <MappingFragment StoreEntitySet="M_SystemFuncAccessRights_Wechat">
+                <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+                <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+                <ScalarProperty Name="FuncCode" ColumnName="FuncCode" />
+                <ScalarProperty Name="FuncName" ColumnName="FuncName" />
+                <ScalarProperty Name="HrefUrl" ColumnName="HrefUrl" />
+                <ScalarProperty Name="IconUrl" ColumnName="IconUrl" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_SystemFuncConn">
+            <EntityTypeMapping TypeName="IsTypeOf(SSM2_PRODModel.M_SystemFuncConn)">
+              <MappingFragment StoreEntitySet="M_SystemFuncConn">
+                <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+                <ScalarProperty Name="ConnID" ColumnName="ConnID" />
+                <ScalarProperty Name="ConnName" ColumnName="ConnName" />
+                <ScalarProperty Name="FuncCode" ColumnName="FuncCode" />
+                <ScalarProperty Name="SystemCode" ColumnName="SystemCode" />
+                <ScalarProperty Name="TestConn" ColumnName="TestConn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_SystemFuncPath">
+            <EntityTypeMapping TypeName="IsTypeOf(SSM2_PRODModel.M_SystemFuncPath)">
+              <MappingFragment StoreEntitySet="M_SystemFuncPath">
+                <ScalarProperty Name="CheckExist" ColumnName="CheckExist" />
+                <ScalarProperty Name="CheckRead" ColumnName="CheckRead" />
+                <ScalarProperty Name="CheckWrite" ColumnName="CheckWrite" />
+                <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+                <ScalarProperty Name="FuncCode" ColumnName="FuncCode" />
+                <ScalarProperty Name="PathID" ColumnName="PathID" />
+                <ScalarProperty Name="PathName" ColumnName="PathName" />
+                <ScalarProperty Name="SystemCode" ColumnName="SystemCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_User">
+            <EntityTypeMapping TypeName="IsTypeOf(SSM2_PRODModel.M_User)">
+              <MappingFragment StoreEntitySet="M_User">
+                <ScalarProperty Name="AlertMethod" ColumnName="AlertMethod" />
+                <ScalarProperty Name="CancelDate" ColumnName="CancelDate" />
+                <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+                <ScalarProperty Name="CancelUser" ColumnName="CancelUser" />
+                <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+                <ScalarProperty Name="DeptCode" ColumnName="DeptCode" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="EmployeeNo" ColumnName="EmployeeNo" />
+                <ScalarProperty Name="ExternalUser" ColumnName="ExternalUser" />
+                <ScalarProperty Name="ExtNo" ColumnName="ExtNo" />
+                <ScalarProperty Name="GroupCode" ColumnName="GroupCode" />
+                <ScalarProperty Name="LangCode" ColumnName="LangCode" />
+                <ScalarProperty Name="LastUpdDate" ColumnName="LastUpdDate" />
+                <ScalarProperty Name="LastUpdUser" ColumnName="LastUpdUser" />
+                <ScalarProperty Name="LoginPlatform" ColumnName="LoginPlatform" />
+                <ScalarProperty Name="MSNID" ColumnName="MSNID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="ReqChgPwd" ColumnName="ReqChgPwd" />
+                <ScalarProperty Name="SiteCode" ColumnName="SiteCode" />
+                <ScalarProperty Name="Suspended" ColumnName="Suspended" />
+                <ScalarProperty Name="UserAttr1" ColumnName="UserAttr1" />
+                <ScalarProperty Name="UserAttr2" ColumnName="UserAttr2" />
+                <ScalarProperty Name="UserAttr3" ColumnName="UserAttr3" />
+                <ScalarProperty Name="UserAttr4" ColumnName="UserAttr4" />
+                <ScalarProperty Name="UserAttr5" ColumnName="UserAttr5" />
+                <ScalarProperty Name="UserCat1" ColumnName="UserCat1" />
+                <ScalarProperty Name="UserCat2" ColumnName="UserCat2" />
+                <ScalarProperty Name="UserCat3" ColumnName="UserCat3" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserIDKey" ColumnName="UserIDKey" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+                <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="M_UserRole">
+            <EntityTypeMapping TypeName="IsTypeOf(SSM2_PRODModel.M_UserRole)">
+              <MappingFragment StoreEntitySet="M_UserRole">
+                <ScalarProperty Name="CompCode" ColumnName="CompCode" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="SSM2">
+        <EntityTypeShape EntityType="SSM2_PRODModel.M_Company" Width="1.5" PointX="0.75" PointY="0.75" Height="4.2879036458333326" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSM2_PRODModel.M_Role" Width="1.5" PointX="2.75" PointY="0.75" Height="3.5186979166666665" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSM2_PRODModel.M_System" Width="1.5" PointX="4.75" PointY="0.75" Height="7.7493294270833335" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSM2_PRODModel.M_SystemFunc" Width="1.5" PointX="6.75" PointY="0.75" Height="4.6725065104166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSM2_PRODModel.M_SystemFuncAccessRights" Width="1.5" PointX="0.75" PointY="6.75" Height="4.8648079427083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSM2_PRODModel.M_SystemFuncAccessRights_Wechat" Width="1.5" PointX="6.75" PointY="6.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSM2_PRODModel.M_SystemFuncConn" Width="1.5" PointX="8.75" PointY="0.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSM2_PRODModel.M_SystemFuncPath" Width="1.5" PointX="8.75" PointY="3.75" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSM2_PRODModel.M_User" Width="1.5" PointX="8.75" PointY="7.75" Height="8.1339322916666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSM2_PRODModel.M_UserRole" Width="1.5" PointX="2.75" PointY="9.75" Height="1.5956835937499996" IsExpanded="true" /></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

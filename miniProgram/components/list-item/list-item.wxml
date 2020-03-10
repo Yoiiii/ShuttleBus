@@ -1,0 +1,14 @@
+<view class="item" bindtap="showDetail">
+    <view class="item-up">
+        <view class="item-up-text">{{travelList.location}}->{{travelList.destination}}</view>
+        <view class="item-up-text2">{{travelList.carID}}</view>
+    </view>
+    <view class="item-mid">
+        <view class="item-down-text">開始時間:{{travelList.time}}</view>
+        <view class="item-down-text">{{travelList.username}}</view>
+        <view wx:if="{{travelList.status==0}}" class="item-down-text3">未开始</view>
+        <view wx:elif="{{travelList.status==1}}" class="item-down-text4">進行中</view>
+        <view wx:elif="{{travelList.status==1}}" class="item-down-text4">待确认</view>
+        <view wx:else class="item-down-text2">已完成</view>
+    </view>
+</view>

@@ -1,0 +1,22 @@
+<!--miniprogram/pages/binding/binding.wxml-->
+<view class="container">
+   <text style="margin-top:30%;margin-left:20rpx; margin-right:20rpx;">第一次使用請輸入手機號和工號進行綁定</text>
+  <view class="login-from">
+    <!--账号-->
+    <view class="inputView">
+      <label class="loginLab">手機號</label>
+      <input class="inputText" placeholder="請輸入手機號" bindinput="phoneInput" />
+    </view>
+    <view class="line"></view>
+    <!--工號-->
+    <view class="inputView">
+      <label class="loginLab">工號</label>
+      <input class="inputText" placeholder="請輸入工號" bindinput="numberInput" />
+    </view>
+    <!--按钮-->
+    <view class="loginBtnView">
+      <button class="loginBtn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="binding">綁定</button>
+    </view>
+  </view>
+</view>
+<van-notify id="van-notify" />

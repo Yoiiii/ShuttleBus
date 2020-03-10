@@ -1,0 +1,5 @@
+/* miniprogram/pages/start/start.wxss */
+.loading{
+  margin-top: 40%;
+  margin-left:40%;
+}

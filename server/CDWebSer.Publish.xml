@@ -1,0 +1,8 @@
+<publishData>
+  <publishTarget publishUrl="D:\Shares\WerSer\">
+    <file relUrl="GPSService.asmx" publishTime="2018-08-28 11:35:06" />
+    <file relUrl="bin/CDWebSer.pdb" publishTime="2018-08-28 12:32:06" />
+    <file relUrl="bin/CDWebSer.dll" publishTime="2018-08-28 12:32:06" />
+    <file relUrl="Web.config" publishTime="2018-08-28 11:50:12" />
+  </publishTarget>
+</publishData>

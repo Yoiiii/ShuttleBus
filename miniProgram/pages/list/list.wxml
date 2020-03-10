@@ -1,0 +1,92 @@
+<!--index.wxml-->
+
+  <!--<van-row>
+    <van-col span="11">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{driverList}}">
+        <van-cell title="司機" value="{{driverList[index]}}" />
+      </picker>
+    </van-col>
+    <van-col span="13">
+      <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{carIdList}}">
+        <van-cell title="車牌" value="{{carIdList[index2]}}" />
+      </picker>
+    </van-col>
+  </van-row>
+  <van-row>
+    <van-col span="11">
+      <picker mode="date" value="{{date}}" start="2019-01-01" end="2050-12-31" bindchange="bindDateChange">
+        <van-cell title="时间" value="{{stime}}" title-width="80rpx;" />
+      </picker>
+    </van-col>
+    <van-col span="10">
+      <picker mode="date" value="{{date2}}" start="2019-01-01" end="2050-12-31" bindchange="bindDateChange2">
+        <van-cell title="~" value="{{etime}}" title-width="60rpx;">
+        </van-cell>
+      </picker>
+    </van-col>
+    <van-col span="3">
+      <view style="background: #fff ;higth:auto; ">
+        <image class="search-btn" src="../../image/Search.png" bindtap="search"></image>
+      </view>
+    </van-col>
+  </van-row>-->
+<view class="search">
+  <view class="search-up">
+    <view class="search-text">司機</view>
+    <picker class="search-picker" bindchange="bindPickerChange" value="{{index}}" range="{{driverList}}">
+      <view class="search-picker-text">{{driverList[index]}}</view>
+    </picker>
+    <view class="search-text">車牌</view>
+    <picker class="search-picker" bindchange="bindPickerChange2" value="{{index2}}" range="{{carIdList}}">
+      <view class="search-picker-text">{{carIdList[index2]}}</view>
+    </picker>
+  </view>
+  <view class="search-down">
+    <view class="search-text">時間</view>
+    <picker class="search-picker" mode="date" value="{{date}}" start="2019-01-01" end="2050-12-31" bindchange="bindDateChange">
+      <view class="search-picker-text">{{stime}}</view>
+    </picker>
+    <view class="search-text">~</view>
+    <picker class="search-picker" mode="date" value="{{date2}}" start="2019-01-01" end="2050-12-31" bindchange="bindDateChange2">
+      <view class="search-picker-text">{{etime}}</view>
+    </picker>
+    <image class="search-btn" src="../../image/Search.png" bindtap="search"></image>
+  </view>
+  <tab-switch tabTitle="{{planList}}" style=" " tabName="type" curIndex="0" bindtabChange="tabChangeIndex">
+</tab-switch>
+</view>
+
+<scroll-view>
+  <view class="container">
+    <block wx:for="{{planList}}" wx:for-index="idxs" wx:for-item="planList" wx:key="id">
+      <view hidden='{{idx!=idxs}}' class="list">
+        <block wx:for="{{planList.travelList}}" wx:for-item="travelList" wx:key="PlanRID">
+          <block wx:if='{{planList.travelList}}'>
+          <list-item travelList="{{travelList}}" bindshowDetail="showDetail"></list-item>
+            <!-- <view class="item" bindtap="jump" data-planid="{{travelList.PlanRID}}" bindtap="showDetail">
+              <view class="item-up">
+                <view class="item-up-text">{{travelList.location}}->{{travelList.destination}}</view>
+                <view class="item-up-text2">{{travelList.carID}}</view>
+                <view wx:if="{{travelList.status==0}}" class="item-up-text3">未开始</view>
+                <view wx:elif="{{travelList.status==1}}" class="item-up-text4">進行中</view>
+                <view wx:elif="{{travelList.status==1}}" class="item-up-text4">待确认</view>
+                <view wx:else class="item-up-text2">已完成</view>
+              </view>
+              <view class="item-mid">
+                <view class="item-down-text">開始時間:{{travelList.time}}</view>
+                <view class="item-down-text">{{travelList.username}}</view>
+              </view>
+            </view> -->
+          </block>
+          <block wx:else>
+            <view class="text6">暫無記錄</view>
+          </block>
+        </block>
+      </view>
+    </block>
+    <view class="block"></view>
+  </view>
+</scroll-view>
+
+
+<!--<image data-planid="{{PlanRID}}" class="chartIcon" src="../../image/BarChart.png" bindtap="jumptoChart" bindlongtap="jumptoBar"></image>-->
